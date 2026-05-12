@@ -159,22 +159,21 @@ nav {
 /*medidas para pantallas*/
 @media (max-width: 992px) {
     .menu-toggle {
-        display: flex;
+         display: flex;
+        width: 40%;
+        /* Aparece en tablets y móviles */
         /* Aparece en tablets y móviles */
     }
 
     nav {
-        margin-left: 0px;
-        width: 70%;
+        width: 100%;
+        max-width: 1200px;
     }
     .logo {
-        flex-shrink: 0;
-        width: 80%;
+       border: none;
     }
     .logo img {
         max-width: 200px;
-        height: auto;
-        display: block;
     }
     .contact {
         display: none;
