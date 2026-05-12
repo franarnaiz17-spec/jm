@@ -40,14 +40,14 @@ header {
 /*caja de navegacion*/
 nav {
     width: 100%;
-    max-width: 1700px;
+    max-width: 1500px;
     /* Para que no se estire infinito en monitores gigantes */
     margin: 0 auto;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2%;
+    padding: 10px 20px;
     border-bottom: 1px solid var(--color-principal);
 
 }
@@ -164,9 +164,18 @@ nav {
     }
 
     nav {
-        padding: 0 20px;
+        margin-left: 0px;
+        width: 70%;
     }
-
+    .logo {
+        flex-shrink: 0;
+        width: 80%;
+    }
+    .logo img {
+        max-width: 200px;
+        height: auto;
+        display: block;
+    }
     .contact {
         display: none;
         /* En móvil es mejor ocultar botones extra o meterlos al menú */
