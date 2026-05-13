@@ -15,3 +15,18 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Esto corta cualquier cosa que se salga a la derecha */
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    /* Evita que cualquier imagen sea más grande que su contenedor */
+    height: auto;
+}
