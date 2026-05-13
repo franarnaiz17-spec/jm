@@ -1,0 +1,32 @@
+/*===== 1. colores Globales y Reset====*/
+:root {
+    --color-principal: #ccff0b;
+    /* Neón JM */
+    --color-secundario: #fdfcff;
+    --color-terciario: #000000;
+    --color-cuaternario: #7f7f7f;
+    --header-bg: rgba(20, 20, 20, 0.95);
+    /* Fondo oscuro elegante */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Esto corta cualquier cosa que se salga a la derecha */
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    /* Evita que cualquier imagen sea más grande que su contenedor */
+    height: auto;
+}
