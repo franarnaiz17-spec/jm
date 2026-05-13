@@ -236,3 +236,10 @@ nav {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+@media (max-width: 425px) {
+    header {
+        max-width: 100vw;
+        overflow: hidden;
+    }
+}
