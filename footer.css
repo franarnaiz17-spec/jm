@@ -15,7 +15,11 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 50px;
 }
-
+.footer-col {
+    word-wrap: break-word;
+    /* Rompe el texto si es muy largo */
+    overflow: hidden;
+}
 /*columnas del footer*/
 .footer-col h4 {
     color: var(--color-principal);
