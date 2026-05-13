@@ -165,12 +165,12 @@ nav {
 @media (max-width: 992px) {
     .menu-toggle {
         display: flex;
-        display: flex;
-        width: 35px;
-        /* Cambia 50% por un tamaño fijo */
-        height: 30px;
-        flex-shrink: 0;
-        /* Que el logo no lo pise */
+        width: 45px;      /* Un poco más grande para el dedo */
+        height: 45px;     /* Área de toque cuadrada */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent; /* Evita el recuadro gris feo al tocar */
     }
 
     nav {}
