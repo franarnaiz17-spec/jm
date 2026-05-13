@@ -130,7 +130,7 @@
 }
 
 @media (max-width: 768px) {
-    .card {
+ .card {
         display: none;
     }
 
