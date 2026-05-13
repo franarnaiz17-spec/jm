@@ -129,12 +129,11 @@
     transform: translate(10px, -10px);
 }
 
-@media (max-width: 768px) {
- display: none !important;
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-
+@media screen and (max-width: 992px) {
+    .card {
+        display: none !important;
+        pointer-events: none; /* Por si acaso queda un fantasma invisible */
+    }
 }
 
 
