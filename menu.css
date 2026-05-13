@@ -165,12 +165,14 @@ nav {
 @media (max-width: 992px) {
     .menu-toggle {
         display: flex;
-        width: 45px;      /* Un poco más grande para el dedo */
-        height: 45px;     /* Área de toque cuadrada */
+        width: 45px; /* Más ancho */
+        height: 45px; /* Más alto */
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        -webkit-tap-highlight-color: transparent; /* Evita el recuadro gris feo al tocar */
+        z-index: 10000;
+        background: transparent; /* Asegura que sea una caja real */
+        -webkit-tap-highlight-color: transparent; 
     }
 
     nav {}
