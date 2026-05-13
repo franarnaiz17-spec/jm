@@ -130,7 +130,7 @@
 }
 
 @media screen and (max-width: 992px) {
-    .card {
+    .iconos-redes {
         display: none !important;
         pointer-events: none; /* Por si acaso queda un fantasma invisible */
     }
