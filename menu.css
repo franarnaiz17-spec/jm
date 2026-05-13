@@ -198,26 +198,25 @@ nav {
     }
 
     /* Estilos para el menú desplegable en móvil */
-    .listas {
-        position: fixed;
-        top: 90px;
-        left: -100%;
-        text-align: center;
-        /* Escondido */
+   .listas {
+        position: fixed; /* Asegura que se posicione respecto a la pantalla */
+        top: 0;         /* Cambia esto a 0 para probar si aparece arriba */
+        left: -100%;    /* Escondido a la izquierda */
         width: 100%;
-        height: calc(100vh - 90px);
-        background-color: #000000;
-        /* Asegúrate que no sea transparente */
-        z-index: 99999 !important;
-        /* MÁS ALTO QUE EL HEADER */
+        height: 100vh;  /* Que ocupe todo el alto */
+        background-color: #000000 !important; /* Color sólido para que no sea transparente */
         display: flex;
         flex-direction: column;
-        transition: 0.5s all ease;
+        justify-content: center; /* Centra los links verticalmente */
+        align-items: center;    /* Centra los links horizontalmente */
+        z-index: 10000 !important; /* Por encima de TODO */
+        transition: transform 0.5s ease, left 0.5s ease;
+        visibility: visible;    /* Asegúrate de que no tenga hidden */
     }
 
     /* Cuando el JS activa la clase "active" */
     .listas.active {
-        left: 0;
+       left: 0 !important;   /* Lo obliga a entrar a la pantalla */
         /* Entra desde la izquierda al centro */
     }
 
