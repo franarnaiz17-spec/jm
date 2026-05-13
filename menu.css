@@ -206,6 +206,7 @@ nav {
         background-color: rgba(0, 0, 0, 0.98);
         width: 100%;
         height: calc(100vh - 90px);
+        z-index: 99999 !important; /* <--- Súbelo al máximo */
         transition: 0.4s ease-in-out;
         display: flex;
     }
