@@ -3,8 +3,10 @@ const menuToggle = document.querySelector('.menu-toggle');
 const listas = document.querySelector('.listas');
 
 menuToggle.addEventListener('click', () => {
-    listas.classList.toggle('active');
+    // Esto activa la animación de la hamburguesa (la X)
     menuToggle.classList.toggle('is-active');
+    // Esto desplaza el menú hacia adentro de la pantalla
+    listas.classList.toggle('active');
 });
 
 // --- CARRUSEL DINÁMICO BANNER ---
