@@ -130,9 +130,10 @@
 }
 
 @media (max-width: 768px) {
- .card {
-        display: none;
-    }
+ display: none !important;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
 
 }
 
