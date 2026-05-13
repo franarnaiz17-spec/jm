@@ -190,51 +190,45 @@ nav {
     }
 
     /* Estilos para el menú desplegable en móvil */
+    /* El contenedor del menú ahora estará por encima de todo */
     .listas {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        /* Escondido */
+        position: fixed; /* Cambiado a fixed para que no dependa del scroll */
+        top: 0; 
+        left: -100%; /* Totalmente fuera de la pantalla */
         width: 100%;
-        text-align: center;
-        height: 100vh;
-        background-color: #000000;
+        height: 100vh; /* Ocupa todo el alto del celular */
+        background-color: #000000; /* Negro sólido para que no sea transparente */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: 0.5s ease-in-out;
-        z-index: 9999;
+        z-index: 99999 !important; /* Valor extremo para ganar al banner */
+        visibility: hidden; /* Evita clics accidentales mientras está oculto */
     }
 
-    /* Cuando el JS activa la clase "active" */
+    /* Esta clase es la que activa tu JS */
     .listas.active {
         left: 0;
-        /* Entra desde la izquierda al centro */
+        visibility: visible;
+    }
+
+    /* Asegura que el botón de cerrar (la X) siempre se vea */
+    .menu-toggle {
+        display: flex;
+        z-index: 100000; /* Un nivel más arriba que el propio menú */
+        position: relative;
     }
 
     .listas ul {
         flex-direction: column;
-        align-items: center;
-        gap: 40px;
+        padding: 0;
+        gap: 35px;
     }
 
     .listas ul li a {
-        font-size: 1.5rem;
-        /* Letras más grandes para tocar con el dedo */
-    }
-
-    /* Animación para convertir la hamburguesa en X */
-    .menu-toggle.is-active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.is-active .bar:nth-child(1) {
-        transform: translateY(11px) rotate(45deg);
-    }
-
-    .menu-toggle.is-active .bar:nth-child(3) {
-        transform: translateY(-11px) rotate(-45deg);
+        font-size: 1.8rem; /* Letras grandes para el celular */
+        color: var(--color-secundario);
     }
 }
 
