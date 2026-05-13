@@ -1,632 +1,1621 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ==== 2.ESTILOS DE LOS ICONOS DE REDES SOCIALES ====*/
+/*caja contenedora de iconos redes sociales*/
+.card {
+    position: fixed;
+    z-index: 1000;
+    top: 35vh;
+    left: 1vh;
+    max-width: fit-content;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    backdrop-filter: blur(15px);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+        inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+    transition: 0.5s;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JM Multiservicios</title>
-    <!--fuentes-->
-    <link rel="preconnect" href="https://googleapis.com">
-    <!--montserrat-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <!--anton-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+/*animacion de la caja contenedora*/
+.card:hover {
+    animation: ease-out 5s;
+    background: rgba(173, 173, 173, 0.05);
+}
 
-    <!--animaciones-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+/*lista de iconos redes sociales*/
+.card ul {
+    padding: 1rem;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
-    <!--menu responsive-->
-    <link rel="stylesheet" href="menu.css">
+/*boton de los iconos redes sociales*/
+.card ul li {
+    cursor: pointer;
+}
 
-    <!--Estilos globales-->
-    <link rel="stylesheet" href="Global estilos.css">
+/*animacion de los iconos redes sociales*/
+.svg {
+    transition: all 0.3s;
+    /* if you find some problems change w - h : 30px*/
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    color: var(--color-principal);
+    fill: currentColor;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
 
-    <!--estilos home-->
-    <link rel="stylesheet" href="home.css">
+/*texto de la animacion de iconos redes sociales*/
+.text {
+    opacity: 0;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s;
+    color: var(--color-terciario);
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    z-index: 9999;
+    box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+        -10px 0 1px rgba(153, 153, 153, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+}
 
-    <!--estilos footer-->
-    <link rel="stylesheet" href="footer.css">
-</head>
+/*isometric prooyection*/
+.iso-pro {
+    transition: 0.5s;
+}
 
-<body>
-    <!--encabezado-->
-    <header>
-        <!--navegacion-->
-        <nav>
-            <!--logo-->
-            <div class="logo">
-                <img src="imagenes/Logo JM multiservicios VARIABLE.png" alt="Logo JM Multiservicios">
-            </div>
+/*animacion de los iconos redes sociales*/
+.iso-pro:hover a>.svg {
+    transform: translate(15px, -15px);
+    border-radius: 100%;
+}
 
-            <!--boton del menu responsive-->
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+/*texto de la animacion de text redes sociales*/
+.iso-pro:hover .text {
+    opacity: 1;
+    transform: translate(25px, -2px) skew(-5deg);
+}
 
-            <!--lista de servicios-->
-            <div class="listas">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="nosotros.html">Quienes Somos</a></li>
-                    <li><a href="trabajos.html">Nuestro Trabajo</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
+/*texto de la animacion de iconos redes sociales*/
+.iso-pro:hover .svg {
+    transform: translate(5px, -5px);
+}
 
-            <!--boton de contacto-->
-            <div class="contact">
-                <a href="contacto.html">Pide Tu Servicio</a>
-            </div>
-        </nav>
-    </header>
+/*animacion de iconos redes sociales*/
+.iso-pro span {
+    opacity: 0;
+    position: absolute;
+    color: #1877f2;
+    border-color: #1877f2;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+    border-radius: 50%;
+    transition: all 0.3s;
+    height: 60px;
+    width: 60px;
+}
 
-    <!--cuerpo del home-->
-    <main>
-        <section class="iconos-redes">
-            <div class="card">
-                <ul>
-                    <li class="iso-pro">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <a href="">
-                            <svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg" class="svg">
-                                <path
-                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                                </path>
-                            </svg></a>
-                        <div class="text">Facebook</div>
-                    </li>
-                    <li class="iso-pro">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <a href="">
-                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path
-                                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                                </path>
-                            </svg>
-                        </a>
-                        <div class="text">Twitter</div>
-                    </li>
-                    <li class="iso-pro">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <a href="">
-                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                                </path>
-                            </svg>
-                        </a>
-                        <div class="text">Instagram</div>
-                    </li>
-                </ul>
-            </div>
+/*animacion de iconos redes sociales*/
+.iso-pro:hover span {
+    opacity: 1;
+}
 
-        </section>
-        <!--  banner  -->
-        <section class="banner-slider">
-            <!--contenedor del banner-->
-            <div class="Contenedor-banner">
-                <!--caja del video-->
-                <div class="slide active">
-                    <!--capa que cubre el video-->
-                    <div class="video-overlay"></div>
-                    <!--video de fondo-->
-                    <video autoplay muted loop playsinline class="video-bg">
-                        <source src="videos/restauracione_1.mp4" type="video/mp4">
-                    </video>
-                    <!--contenido del slide-->
-                    <div class="hero-content">
-                        <h1>Restauración <span class="highlight">Maestra de Superficies</span></h1>
-                        <p>Especialidad técnica en acabados de alto nivel</p>
-                        <a href="#contacto" class="btn-main">Pide tu presupuesto</a>
-                    </div>
-                </div>
-                <!--caja de la imagen-->
-                <div class="slide">
-                    <img src="imagenes/evaluacion de condominios.jpg" loading="lazy" alt="Electricidad" class="img-bg">
-                    <!--capa que cubre la imagen-->
-                    <div class="video-overlay"></div>
-                    <!--contenido del slide-->
-                    <div class="hero-content">
-                        <h1>Evaluación <span class="highlight">Integral de Condominios e Inmuebles</span></h1>
-                        <p>Realizamos una Evaluación Integral de su inmueble para detectar Puntos de Mejora</p>
-                        <a href="#servicios" class="btn-main">Ver detalles</a>
-                    </div>
-                </div>
-                <!--caja de la imagen-->
-                <div class="slide">
-                    <img src="imagenes/limpieza.jpg" loading="lazy" alt="Mantenimiento" class="img-bg">
-                    <!--capa que cubre la imagen-->
-                    <div class="video-overlay"></div>
-                    <!--contenido del slide-->
-                    <div class="hero-content">
-                        <h1>Protocolos <span class="highlight"> de Higiene Estratégica</span></h1>
-                        <p>Calidad impecable que se adapta a su flujo de caja.</p>
-                        <a href="#contacto" class="btn-main">Contáctanos</a>
-                    </div>
-                </div>
-            </div>
+/*animacion de iconos redes sociales*/
+.iso-pro:hover span:nth-child(1) {
+    opacity: 0.2;
+}
 
-            <!--indicadores del slide-->
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+/*animacion de iconos redes sociales*/
+.iso-pro:hover span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+}
 
-        </section>
+.iso-pro:hover span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+}
 
-        <!--Carrusel infinito-->
-        <section class="infinito">
-            <!--contenedor del carrusel-->
-            <div class="animated">
-                <!--caja de servicios e imagenes -->
-                <div class="servicios">
-                    <img src="imagenes/image1.webp" alt="Aliado 1" loading="eager">
-                    <img src="imagenes/image2.webp" alt="Aliado 2" loading="eager">
-                    <img src="imagenes/image3.webp" alt="Aliado 3" loading="eager">
-                    <img src="imagenes/image4.webp" alt="Aliado 4" loading="eager">
-                    <img src="imagenes/image5.webp" alt="Aliado 5" loading="eager">
-                    <img src="imagenes/image1.webp" alt="Aliado 1" loading="eager">
-                    <img src="imagenes/image2.webp" alt="Aliado 2" loading="eager">
-                    <img src="imagenes/image3.webp" alt="Aliado 3" loading="eager">
-                    <img src="imagenes/image4.webp" alt="Aliado 4" loading="eager">
-                    <img src="imagenes/image5.webp" alt="Aliado 5" loading="eager">
-                </div>
-            </div>
-        </section>
+@media (max-width: 768px) {
+    .card {
+        display: none;
+    }
 
-        <!--seccion de servicios del home-->
-        <section class="section-servicios">
-            <!--titulo de fondo-->
-            <h2 class="titulo-fondo">Servicios</h2>
-            <!--presentacion y titulo de la seccion servicios-->
-            <div class="present-servicios">
-                <button>Solicita una mirada experta</button>
-                <h2>Elevamos Tu <span>Inmueble </span></h2>
-                <p>Soluciones de mantenimiento de alta gama diseñadas para que cada pasillo y cada piso reflejen la
-                    elegancia y el cuidado que su comunidad merece.</p>
-            </div>
-            <!--contenedor de las tarjetas-->
-            <div class="contenedor-tarjetas">
-                <!--tarjetas de servicios-->
-                <div class="soluciones">
-                    <!--linea neon-->
-                    <div class="linea-neon"></div>
-                    <!--icono-->
-                    <div class="card-icon">
-                        <img src="imagenes/icono1.svg" alt="icono1">
-                    </div>
-                    <!--titulo y parrafo-->
-                    <h3>Auditoría y Evaluación Técnica</h3>
-                    <p>Diagnóstico profesional de infraestructuras para detectar Puntos de Mejora y prevenir gastos
-                        imprevistos en su edificio.</p>
-                    <a href="">ANTICIPAR SOLUCIONES <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <!--tarjetas de servicios-->
-                <div class="soluciones">
-                    <!--linea neon-->
-                    <div class="linea-neon"></div>
-                    <!--icono-->
-                    <div class="card-icon">
-                        <img src="imagenes/icono2.svg" alt="icono2">
-                    </div>
-                    <!--titulo y parrafo-->
-                    <h3>Limpieza Estratégica</h3>
-                    <p>Sistema de higiene flexible que se adapta a su presupuesto semanal, garantizando áreas impecables
-                        incluso con retos de morosidad.</p>
-                    <a href="">OPTIMIZAR MI HIGIENE <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <!--tarjetas de servicios-->
-                <div class="soluciones">
-                    <!--linea neon-->
-                    <div class="linea-neon"></div>
-                    <!--icono-->
-                    <div class="card-icon">
-                        <img src="imagenes/icono3.svg" alt="icono3">
-                    </div>
-                    <!--titulo y parrafo-->
-                    <h3>Restauración de Superficies</h3>
-                    <p>Especialistas en el pulido de alto nivel para mármol, granito y sistemas epóxicos, devolviendo el
-                        brillo original a sus espacios.</p>
-                    <a href="">RECUPERAR EL BRILLO <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <!--tarjetas de servicios-->
-                <div class="soluciones">
-                    <!--linea neon-->
-                    <div class="linea-neon"></div>
-                    <!--icono-->
-                    <div class="card-icon">
-                        <img src="imagenes/icono4.svg" alt="icono4">
-                    </div>
-                    <!--titulo y parrafo-->
-                    <h3>Gestión Integral de Obras</h3>
-                    <p>Remodelaciones y mantenimiento preventivo ejecutado con estándares corporativos, asegurando
-                        resultados impecables.</p>
-                    <a href="">TRANSFORMAR MI ESPACIO <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!--seccion nuestro diferencial del home-->
-        <section class="nuestro-diferencial">
-            <h2 class="titulo-fondo2">Nosotros</h2>
-            <!--caja contenedora de la imagen-->
-            <div class="imagen-diferencial">
-                <img src="imagenes/trabajador-mayor-diferencial.png" alt="">
-            </div>
-            <!--contenedor de textos-->
-            <div class="content-diferencial">
-                <!--texto decorativo-->
-                <div class="texto-decorativo">
-                    <button>Nuestro Diferencial</button>
-                </div>
-                <!--contenedor de textos diferenciales-->
-                <div class="textos-diferenciales">
-                    <!--titulo y parrafo-->
-                    <h2>Experiencia que Transforma,<span class="color-diferencial"> Propósito que Inspira</span></h2>
-                    <p>En JM Multiservicios entendemos que su edificio es su activo más valioso. Mientras el mercado
-                        improvisa, nosotros rescatamos la ética del trabajo bien hecho. Nuestro equipo está integrado
-                        por adultos mayores y maestros de oficio: profesionales que poseen el detalle y la honestidad
-                        que su comunidad merece.</p>
-
-                    <!--textos de llamado a la accion-->
-                    <div class="accion">
-                        <h3>Ética Inquebrantable</h3>
-                        <p>Honestidad total en el uso de insumos y diagnósticos técnicos.</p>
-                    </div>
-                    <!--textos de llamado a la accion-->
-                    <div class="accion">
-                        <h3>Mirada Experta</h3>
-                        <p>Supervisión directa de fundadores en cada proyecto ejecutado.</p>
-                    </div>
-                    <!--boton de llamado a la accion-->
-                    <a href="">Descubre la Diferencia</a>
-                </div>
-            </div>
-        </section>
-
-        <!--seccion nuestra confianza-->
-        <section class="section-confianza">
-            <div class="titulo-fondo3">Confianza</div>
-            <!--contenedor de la seccion-->
-            <div class="container-confianza">
-                <!--caja del texto de aliados-->
-                <div class="aliados-text">
-                    <!--span decorativo-->
-                    <span class="tag-premium">Por qué elegirnos</span>
-                    <!--titulo-->
-                    <h2>Soluciones Reales para la <span>Realidad Nacional</span></h2>
-                    <!--parrafo-->
-                    <p>Entendemos los desafíos de los condominios hoy: presupuestos ajustados y la necesidad de
-                        resultados que
-                        revaloricen su inversión.</p>
-                </div>
-                <!--contenedor de estadisticas-->
-                <div class="grid-stats">
-                    <!--caja de estadistica-->
-                    <div class="stat-item">
-                        <!--icono-->
-                        <img src="imagenes/iconos-directo .png" alt="">
-                        <!--titulo-->
-                        <h4>Trato Directo</h4>
-                        <!--parrafo-->
-                        <p>Negociación transparente directamente con los dueños, sin intermediarios.</p>
-                    </div>
-                    <!--caja de estadistica-->
-                    <div class="stat-item">
-                        <!--icono-->
-                        <img src="imagenes/icono-interrupcion.png" alt="">
-                        <!--titulo-->
-                        <h4>Cero Interrupciones</h4>
-                        <!--parrafo-->
-                        <p>Garantizamos la sustitución inmediata del personal para que su servicio nunca se detenga.</p>
-                    </div>
-                    <!--caja de estadistica-->
-                    <div class="stat-item">
-                        <!--icono-->
-                        <img src="imagenes/icono-garantia.png" alt="">
-                        <!--titulo-->
-                        <h4>Garantía Amplia</h4>
-                        <!--parrafo-->
-                        <p>Respaldamos cada obra y servicio con una garantía real sobre materiales y mano de obra.</p>
-                    </div>
-                </div>
-                <!--contenedor del banner social decorativo-->
-                <div class="banner-social">
-                    <!--contenedor del contenido del banner-->
-                    <div class="banner-content">
-                        <!--titulo-->
-                        <h3>Más que un servicio, un <span>Propósito Social</span></h3>
-                        <!--parrafo-->
-                        <p>Generamos oportunidades laborales para adultos mayores, integrando la sabiduría de la
-                            experiencia en
-                            el cuidado de su edificio.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--seccion preguntas frecuentes-->
-        <section class="section-faq">
-            <div class="fondo-faq"></div>
-            <!--contenedor de la seccion-->
-            <div class="container-faq">
-                <!--contenedor del encabezado de la seccion-->
-                <div class="faq-header">
-                    <!--span decorativo-->
-                    <span class="tag-premium">Consultoría</span>
-                    <!--titulo-->
-                    <h2>Resolvemos sus <span>Dudas Técnicas</span></h2>
-                    <!--parrafo-->
-                    <p>La transparencia es nuestra base. Aquí respondemos las inquietudes más comunes de las Juntas de
-                        Condominio proactivas.</p>
-                </div>
-
-                <!--contenedor del grid de preguntas frecuentes-->
-                <div class="faq-grid">
-                    <!--primera pregunta-->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <!--icono-->
-                            <h3>¿Cómo manejan la morosidad del edificio en su plan de trabajo?</h3>
-                            <!--span-->
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <!--parrafo-->
-                        <div class="faq-answer">
-                            <p>Diseñamos planes de limpieza estratégica que se adaptan al flujo de caja semanal. Nuestra
-                                prioridad es mantener la higiene de las áreas críticas sin comprometer la estabilidad
-                                financiera del condominio.</p>
-                        </div>
-                    </div>
-
-                    <!--segunda pregunta-->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <!--icono-->
-                            <h3>¿Qué garantía ofrecen en los trabajos de restauración?</h3>
-                            <!--span-->
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <!--parrafo-->
-                        <div class="faq-answer">
-                            <p>Ofrecemos garantía escrita sobre la mano de obra y los materiales utilizados. Al ser
-                                maestros de oficio, aseguramos que el brillo de su mármol o granito perdure con el
-                                mantenimiento adecuado.</p>
-                        </div>
-                    </div>
-
-                    <!--tercera pregunta-->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <!--icono-->
-                            <h3>¿El personal está bajo responsabilidad de JM Multiservicios?</h3>
-                            <!--span-->
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <!--parrafo-->
-                        <div class="faq-answer">
-                            <p>Totalmente. Nosotros nos encargamos de toda la carga administrativa, legal y de
-                                supervisión. Si un trabajador falta, garantizamos su sustitución inmediata para no
-                                interrumpir el servicio.</p>
-                        </div>
-                    </div>
-
-                    <!--cuarta pregunta-->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <!--icono-->
-                            <h3>¿Pueden realizar un diagnóstico sin compromiso?</h3>
-                            <!--span-->
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <!--parrafo-->
-                        <div class="faq-answer">
-                            <p>Sí. Nuestra "Mirada Experta" comienza con una visita técnica gratuita donde evaluamos
-                                puntos críticos de su infraestructura y entregamos un informe de mejoras prioritarias.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--seccion de preguntas frecuentes-->
-                <div class="faq-cta-rapido">
-                    <!--titulo-->
-                    <h3>¿Tiene una duda específica sobre su edificio?</h3>
-                    <!--parrafo-->
-                    <p>Escríbala aquí y reciba una respuesta técnica en menos de 24 horas.</p>
-                    <!--contenedor del input y los botones-->
-                    <div class="input-grupo-custom">
-                        <input type="text" id="user-duda"
-                            placeholder="Ej: ¿Atienden en la zona de los Altos Mirandinos?">
-                        <!--contenedor de los botones-->
-                        <div class="botones-contacto">
-                            <button onclick="enviarWhatsApp()" class="btn-ws">
-                                <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                            </button>
-                            <button onclick="enviarCorreo()" class="btn-mail">
-                                <i class="fas fa-envelope"></i> Enviar por Correo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--seccion de cobertura-->
-        <section class="section-cobertura">
-            <!--titulo de fondo-->
-            <div class="titulo-fondo4">Cobertura</div>
-            <!--contenedor de la seccion de cobertura-->
-            <div class="container-cobertura">
-                <!--texto de la seccion de cobertura-->
-                <div class="texto-cobertura">
-                    <!--tag premium-->
-                    <span class="tag-premium">Presencia Local</span>
-                    <!--titulo-->
-                    <h2>Nuestra Mirada Experta en toda la <span>Región Capital</span></h2>
-                    <p>Brindamos soluciones de mantenimiento de alto nivel con un equipo desplegado estratégicamente
-                        para
-                        garantizar tiempos de respuesta inmediatos.</p>
-                    <!--contenedor de zonas-->
-                    <div class="zonas-grid">
-                        <!--zona 1-->
-                        <div class="zona-item">
-                            <img src="imagenes/icono-capital.svg" alt="">
-                            <div>
-                                <!--titulo-->
-                                <h4>Distrito Capital</h4>
-                                <!--parrafo-->
-                                <p>Casco Urbano de Caracas, Chacao, Baruta y principales zonas comerciales.</p>
-                            </div>
-                        </div>
-                        <!--zona 2-->
-                        <div class="zona-item">
-                            <img src="imagenes/icono-altos.svg" alt="">
-                            <div>
-                                <!--titulo-->
-                                <h4>Altos Mirandinos</h4>
-                                <!--parrafo-->
-                                <p>San Antonio de los Altos, Los Teques y Carrizal.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--seccion de mapa-->
-                <div class="mapa-creativo">
-                    <!--punto central-->
-                    <div class="punto-central">
-                        <div class="pulso-neon"></div>
-                        <img src="imagenes/mapa-home.svg" alt="Mapa de cobertura JM" class="img-mapa">
-                    </div>
-                    <!--pin caracas-->
-                    <div class="pin pin-caracas"><span>Caracas</span></div>
-                    <div class="pin pin-altos"><span>Altos Mirandinos</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==== 7. SECCIÓN DE CIERRE ÉPICO (TESTIMONIOS) ==== -->
-        <section class="seccion-cierre-epico">
-            <!--contenedor de cierre epico-->
-            <div class="glass-banner">
-                <!--contenido de cierre epico-->
-                <div class="cierre-content">
-                    <!--texto de cierre epico-->
-                    <div class="cierre-texto">
-                        <!--titulo-->
-                        <h2>¿Listo para elevar el estándar de su <span>comunidad?</span></h2>
-                        <!--parrafo-->
-                        <p>Únase a las Juntas de Condominio que ya transformaron su gestión con nuestra mirada experta.
-                        </p>
-                    </div>
-                    <!--botones de cierre epico-->
-                    <div class="cierre-botones">
-                        <!--boton de servicio principal-->
-                        <a href="#contacto" class="btn-principal-cierre">
-                            <!--texto del boton-->
-                            <span>SOLICITAR SERVICIO</span>
-                        </a>
-                        <!--boton de whatsapp-->
-                        <a href="https://wa.me/584241234567" class="btn-whatsapp-humano">
-                            <!--imagen del boton-->
-                            <img src="imagenes/icono-whatsapp.svg" alt="WhatsApp">
-                            <div class="texto-ws">
-                                <!--texto del boton-->
-                                <span class="main-ws">HABLAR CON JOHNNY</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--luz decorativa-->
-                <div class="luz-decorativa"></div>
-            </div>
-        </section>
-
-    </main>
-    <!-- ==== 8. SECCIÓN FOOTER ==== -->
-    <footer class="main-footer">
-        <!--contenedor del footer-->
-        <div class="container-footer">
-            <!--columna informacion de la marca-->
-            <div class="footer-col info-marca">
-                <!--logo del footer-->
-                <img src="imagenes/Logo JM multiservicios VARIABLE.png" alt="JM Multiservicios" class="footer-logo">
-                <!--parrafo-->
-                <p>Transformamos la gestión de condominios con nuestra <span class="resaltado">Mirada Experta</span>.
-                    Honestidad, Transparencia y Calidad en cada detalle.</p>
-                <!--caja contenedora de redes sociales-->
-                <div class="social-links">
-                    <!--instagram-->
-                    <a href="#"><img src="imagenes/logo-whatsapp.svg" alt="Instagram"></a>
-                    <!--facebook-->
-                    <a href="#"><img src="imagenes/logo-instagram.svg" alt="Facebook"></a>
-                    <!--linkedin-->
-                    <a href="#"><img src="imagenes/logo-tiktok.svg" alt="Tiktok"></a>
-                </div>
-            </div>
-
-            <!--columna de servicios-->
-            <div class="footer-col">
-                <!--titulo-->
-                <h4>SERVICIOS</h4>
-                <!--lista de servicios-->
-                <ul>
-                    <!--servicio 1-->
-                    <li><a href="#">Limpieza Estratégica</a></li>
-                    <!--servicio 2-->
-                    <li><a href="#">Restauración de Pisos</a></li>
-                    <!--servicio 3-->
-                    <li><a href="#">Mantenimiento Técnico</a></li>
-                    <!--servicio 4-->
-                    <li><a href="#">Asesoría de Inmuebles</a></li>
-                </ul>
-            </div>
-
-            <!--columna de contacto-->
-            <div class="footer-col">
-                <!--titulo-->
-                <h4>CONTACTO DIRECTO</h4>
-                <!--lista de contacto-->
-                <div class="contacto-items">
-                    <!--zona-->
-                    <p>Caracas y Altos Mirandinos</p>
-                    <!--telefono-->
-                    <p class="telefono">+58 424 123 45 67</p>
-                    <!--correo-->
-                    <p class="email">contacto@jmmultiservicios.com</p>
-                </div>
-            </div>
-
-            <!--columna impacto social-->
-            <div class="footer-col">
-                <!--titulo-->
-                <h4>NUESTRO IMPACTO</h4>
-                <!--parrafo-->
-                <p>Orgullosos de integrar a <strong>Adultos Mayores</strong> en nuestra fuerza laboral, combinando
-                    experiencia y sabiduría para el cuidado de su hogar.</p>
-            </div>
-        </div>
-        <!--pie de pagina-->
-        <div class="footer-bottom">
-            <!--copyright-->
-            <p>&copy; 2024 JM Multiservicios - Todos los derechos reservados. | Diseñado con Mirada Experta.</p>
-        </div>
-    </footer>
-</body>
+}
 
 
-<script src="active.js"></script>
+/* ==== 3.ESTILOS DEL BANNER SLIDER ====*/
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    /* Usa el 100% para que inicie desde el tope real */
+    overflow: hidden;
+    margin-top: 0;
+    /* ELIMINA EL MARGIN-TOP para que el banner suba hasta el borde de la pantalla */
+}
 
-</html>
+/*caja contenedora del slider*/
+.contenedor-banner {
+    width: 100%;
+    height: 100%;
+}
+
+/*caja de contenido de eslider*/
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* Ocultos por defecto */
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*caja slide activo video*/
+.slide.active {
+    opacity: 1;
+    /* Solo el activo se ve */
+    z-index: 1;
+}
+
+/*imagenes de fondo*/
+.img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Video de fondo */
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*capa que cubre el video*/
+.video-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Oscurece el video un 50% */
+    z-index: 0;
+}
+
+/*contenido del slide*/
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    color: var(--color-secundario);
+    padding: 0 40px;
+}
+
+/*titulos*/
+.hero-content h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    /* Tamaño fluido */
+    margin-bottom: 20px;
+    line-height: 3.5rem;
+}
+
+/*parrafos*/
+.hero-content p {
+    font-size: clamp(1rem, 1.5vw, 3rem);
+
+
+}
+
+.hero-content .btn-main {
+    background: var(--color-principal);
+    color: var(--color-terciario);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.4s;
+    position: relative;
+    top: 3rem;
+    border: 2px solid var(--color-principal);
+}
+
+/*palabras clave span*/
+.highlight {
+    color: var(--color-principal);
+    /* Tu color neón */
+}
+
+/* --- BOTONES (DOTS) ABAJO --- */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+/*puntitos de navegacion*/
+.dot {
+    width: 50px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/*color de puntitos*/
+.dot.active {
+    background: var(--color-principal);
+    width: 80px;
+    /* Se alarga cuando está activo */
+}
+
+/* ==== 4.ESTILOS DEL  CARRUSSEL INFINITO ====*/
+
+
+/*seccion del carrusel infinito*/
+.infinito {
+    width: 100%;
+    background: var(--color-principal);
+    overflow: hidden;
+    padding: 15px 0;
+    /* Evita que el navegador calcule cosas innecesarias */
+    contain: content;
+}
+
+.animated {
+    width: 100%;
+    display: flex;
+}
+
+/*caja contenedora de imagenes*/
+.servicios {
+    display: flex;
+    width: max-content;
+    /* Aumentamos el tiempo a 40s para que el movimiento sea más suave/lento */
+    animation: infinito 30s linear infinite;
+
+    /* ESTO ES LO MÁS IMPORTANTE PARA LA FLUIDEZ */
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/*imagenes del carrusel*/
+.servicios img {
+    height: 50px;
+    width: auto;
+    margin: 0 40px;
+
+    /* Evita que las imágenes "vibren" al moverse */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+/*animacion del carrusel infinito*/
+@keyframes infinito {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        /* Movemos exactamente el 50% porque duplicamos el contenido */
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+
+/* ==== 5.ESTILOS DE LA SECCION SERVICIOS ====*/
+
+/*seccion de los servicios*/
+.section-servicios {
+    width: 100%;
+    max-width: 100%;
+    /* Permitir que ocupe todo el ancho */
+    min-height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    padding: 80px 5%;
+    /* Padding en % para que respire en móviles */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.87)),
+        url('imagenes/fondo\ servicios.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: local;
+    /* Mejor efecto visual al hacer scroll */
+    position: relative;
+    overflow: hidden;
+}
+
+/*titulo de fondo*/
+.titulo-fondo {
+    position: absolute;
+    color: rgba(202, 255, 11, 0.103);
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    font-family: 'anton', sans-serif;
+    font-size: 15vw;
+    /* Tamaño basado en el ancho de pantalla */
+    letter-spacing: 0.2vw;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/*caja de la presentacion de los servicios*/
+.present-servicios {
+    width: 100%;
+    max-width: 800px;
+    /* No dejar que se estire demasiado en pantallas gigantes */
+    text-align: center;
+    z-index: 1;
+}
+
+/*boton decorativo presentacion servicios*/
+.present-servicios button {
+    background: linear-gradient(180deg, #000000a1, #000000ef, #ffffff2f);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: 0.4s;
+    position: relative;
+    color: #fdfcff;
+    font-size: 1rem;
+    top: 0rem;
+    border: 1px solid var(--color-secundario);
+}
+
+/*titulo de presentacion de servicios*/
+.present-servicios h2 {
+    color: var(--color-secundario);
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Tamaño dinámico entre 2rem y 3.5rem */
+    margin: 10px 0;
+}
+
+/*segundo color del titulo de presentacion*/
+.present-servicios span {
+    color: var(--color-principal);
+}
+
+/*parrafo de presentacion de servicios*/
+.present-servicios p {
+    color: var(--color-secundario);
+    font-weight: 300;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    line-height: 1.5;
+}
+
+/*contenedor de tarjetas*/
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* MAGIA: se ajusta solo */
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    z-index: 1;
+}
+
+/*caja individual de los servicios*/
+.soluciones {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 50px 30px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/*animacion de las tarjetas cuando se pasa el mouse*/
+.soluciones:hover {
+    transform: translateY(-10px);
+    background: rgba(110, 110, 110, 0.411);
+    border-color: var(--color-principal);
+}
+
+/*linea decorativa de la tarjeta*/
+.linea-neon {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 5px;
+    /* Ancho fijo para que no se vea gigante en desktop */
+    height: 60%;
+    background: var(--color-principal);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+/*caja de iconos de las tarjetas*/
+.card-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--color-principal);
+}
+
+/*iconos de las tarjetas*/
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--color-principal);
+}
+
+/*animacion de los iconos*/
+.card-icon::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    /* Gradiente en forma de anillo (aro) */
+    background: radial-gradient(circle, transparent 40%, rgba(204, 255, 11, 0.4) 50%, transparent 70%);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/*titulo de las tarjetas*/
+.soluciones h3 {
+    color: var(--color-secundario);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/*parrafos de las tarjetas*/
+.soluciones p {
+    color: var(--color-cuaternario);
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    max-width: 90%;
+}
+
+/*botones de las tarjetas*/
+.soluciones a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+/*animacion de los botones tarjetas*/
+.soluciones a:hover {
+    filter: brightness(1.2);
+    transform: translate X(10px);
+    /* Pequeña animación de la flecha */
+}
+
+/* ==== 6.ESTILOS DE LA SECCION NUESTRO DIFERENCIAL ====*/
+
+
+/*seccion nuestro diferencial del home*/
+.nuestro-diferencial {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 80vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.596), rgba(112, 112, 112, 0.26)),
+        url('imagenes/fondo-nosotros.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* Permite que los elementos bajen en pantallas pequeñas */
+    border-top: solid 5px var(--color-principal);
+}
+
+/*titulo de fondo de la seccion diferencial*/
+.titulo-fondo2 {
+    position: absolute;
+    color: #0000002a;
+    top: 15%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    font-family: 'anton', sans-serif;
+    font-size: 13vw;
+    /* Tamaño basado en el ancho de pantalla */
+    letter-spacing: 0.2vw;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/*caja de la imagen de la seccion diferencial*/
+.imagen-diferencial {
+    position: relative;
+    flex: 1;
+    /* Ocupa espacio flexible */
+    min-width: 300px;
+    /* Evita que la imagen se haga minúscula */
+    height: 100%;
+}
+
+/*imagen de la seccion diferencial*/
+.imagen-diferencial img {
+    position: absolute;
+    left: -5vw;
+    top: -48.5vh;
+    width: 52vw;
+    z-index: 0s;
+
+}
+
+/*caja del titulo y descripcion*/
+.content-diferencial {
+    flex: 1.1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 60px;
+    z-index: 3;
+}
+
+/*caja del texto decorativo*/
+.texto-decorativo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+
+}
+
+/*boton decorativo de la seccion diferencial*/
+.texto-decorativo button {
+    padding: 10px 20px;
+    cursor: default;
+    background: linear-gradient(to right, var(--color-terciario), var(--color-cuaternario));
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+/*titulo de la seccion diferencial*/
+.textos-diferenciales h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    /* Tamaño fluido */
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+/*segundo color del titulo de la seccion diferencial*/
+.color-diferencial {
+    color: #525252;
+
+}
+
+/*parrafo de la seccion diferencial*/
+.textos-diferenciales p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #3d3d3d;
+    font-weight: 500;
+}
+
+/*caja del texto de accion*/
+.accion {
+    margin-bottom: 15px;
+}
+
+.accion h3 {
+    font-size: 1.2rem;
+    color: var(--color-terciario);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*boton de accion de la seccion diferencial*/
+.textos-diferenciales a {
+    display: inline-block;
+    /* Para que el padding funcione bien */
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-principal);
+    background: var(--color-terciario);
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.textos-diferenciales a:hover {
+    background: var(--color-principal);
+    color: var(--color-terciario);
+    transform: translateY(-5px);
+}
+
+/* ==== 7. ESTILOS SECCIÓN CONFIANZA / COMPROMISO ==== */
+
+
+/*seccion de confianza*/
+.section-confianza {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.9)), url('imagenes/fondo-confianza.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 100px 5%;
+    position: relative;
+    border-top: solid 5px var(--color-principal);
+}
+
+/*titulo de fondo de la seccion de confianza*/
+.titulo-fondo3 {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    font-weight: 800;
+    letter-spacing: .2rem;
+    font-family: 'anton', sans-serif;
+    color: #caff0b1a;
+    z-index: 0;
+}
+
+/*contenedor de la seccion de confianza*/
+.container-confianza {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*span*/
+.tag-premium {
+    color: var(--color-principal);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: inline-block;
+    border: solid 2px var(--color-principal);
+    padding: 20px 40px;
+    border-radius: .5rem;
+}
+
+/*caja del texto de aliados*/
+.aliados-text {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/*titulo de aliados*/
+.aliados-text h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #fff;
+    line-height: 1.2;
+}
+
+.aliados-text h2 span {
+    color: var(--color-principal);
+}
+
+/*parrafo de aliados*/
+.aliados-text p {
+    color: #888;
+    max-width: 700px;
+    margin: 20px auto 0;
+    font-size: 1.1rem;
+}
+
+/* Grid de Compromisos */
+.grid-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/*caja de estadistica*/
+.stat-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+    text-align: left;
+}
+
+/*icono de estadistica*/
+.stat-item img {
+    width: 5rem;
+    margin-bottom: 20px;
+}
+
+/*titulo de estadistica*/
+.stat-item h4 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/*parrafo de estadistica*/
+.stat-item p {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/*animacion de las cajas de estadistica*/
+.stat-item:hover {
+    background: rgba(202, 255, 11, 0.02);
+    border-color: var(--color-principal);
+    transform: translateY(-5px);
+}
+
+/* Banner Social Sutil */
+.banner-social {
+    background: linear-gradient(90deg, rgba(202, 255, 11, 0.05) 0%, transparent 100%);
+    border-left: 4px solid var(--color-principal);
+    padding: 40px;
+    border-radius: 0 20px 20px 0;
+    margin-top: 40px;
+}
+
+/*animacion del banner social*/
+.banner-social:hover {
+    background: rgba(56, 56, 56, 0.705);
+    border-color: var(--color-principal);
+    transform: translateY(-5px);
+}
+
+/*caja del contenido del banner*/
+.banner-content h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/*parrafo del banner*/
+.banner-content p {
+    color: #ccc;
+    max-width: 800px;
+}
+
+/* ==== 8. ESTILOS SECCIÓN FAQ ==== */
+
+
+/*seccion de faq*/
+.section-faq {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 5%;
+    color: #fff;
+    z-index: 666;
+    border-top: 5px solid var(--color-principal);
+}
+
+/*fondo de faq animado*/
+.fondo-faq {
+    /* dimensions y centrado */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* colores y gradiente */
+    background: #3d3c3c;
+    /* fallback para navegadores que no soportan gradientes */
+    background: linear-gradient(135deg,
+            #121212 25%,
+            #1a1a1a 25%,
+            #1a1a1a 50%,
+            #121212 50%,
+            #121212 75%,
+            #1a1a1a 75%,
+            #1a1a1a);
+    background-size: 40px 40px;
+
+    /* animacion del fondo */
+    animation: move 4s linear infinite;
+}
+
+/*animacion de fondo del faq*/
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+/*contenedor de la seccion faq*/
+.container-faq {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/*encabezado de la seccion faq*/
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*titulo de la seccion faq*/
+.faq-header h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin: 15px 0;
+}
+
+/*color del titulo de la seccion faq*/
+.faq-header span {
+    color: var(--color-principal);
+}
+
+/*caja de la lista de preguntas del faq*/
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*caja de preguntas del faq*/
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*animacion de las cajas del faq*/
+.faq-item:hover {
+    border-color: var(--color-principal);
+    background: rgba(202, 255, 11, 0.02);
+}
+
+/*pregunta del faq*/
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*titulo de la pregunta del faq*/
+.faq-question h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #b4b3b3;
+    margin: 0;
+}
+
+/*icono de la pregunta del faq*/
+.faq-question i {
+    color: var(--color-principal);
+    transition: 0.3s;
+}
+
+/*respuesta del faq*/
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/*parrafo de la respuesta del faq*/
+.faq-answer p {
+    padding-top: 15px;
+    color: var(--color-secundario);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Clase activa (para usar con un poco de JS) */
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+/*animacion de la pregunta del faq*/
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+}
+
+/*caja de respuestas y preguntas del usuario*/
+.faq-cta-rapido {
+    margin-top: 50px;
+    padding: 40px;
+    background: linear-gradient(145deg, rgba(202, 255, 11, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 20px;
+    border: 1px dashed rgba(202, 255, 11, 0.3);
+    text-align: center;
+}
+
+/*titulo de la caja de respuestas y preguntas del usuario*/
+.faq-cta-rapido h3 {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/*contenedor de input de la caja de respuestas y preguntas del usuario*/
+.input-grupo-custom {
+    max-width: 600px;
+    margin: 30px auto 0;
+}
+
+/*input del contenedor de respuestas y preguntas del usuario*/
+.input-grupo-custom input {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/*animacion del input del contenedor de respuestas y preguntas del usuario*/
+.input-grupo-custom input:focus {
+    border-color: var(--color-principal);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/*botones de contacto del fap correo y whatsapp*/
+.botones-contacto {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/*boton de contacto de whatsapp*/
+.btn-ws {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/*boton de contacto de whatsapp*/
+.btn-ws {
+    background: #25D366;
+    color: #fff;
+}
+
+/*boton de contacto de correo*/
+.btn-mail {
+    background: var(--color-principal);
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 10px;
+}
+
+.btn-ws:hover,
+.btn-mail:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ==== 9. SECCIÓN COBERTURA GEOGRÁFICA ==== */
+
+
+/*seccion de cobertura*/
+.section-cobertura {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(15, 15, 15, 0.897)), url('imagenes/fondo-mapa.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 100px 5%;
+    color: #fff;
+    border-top: 5px solid var(--color-principal);
+    position: relative;
+}
+
+/*contenedor de la seccion de cobertura*/
+.container-cobertura {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/*titulo de fondo de la seccion de cobertura*/
+.titulo-fondo4 {
+    position: absolute;
+    top: 13%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: .2rem;
+    font-family: 'anton', sans-serif;
+    color: #caff0b1a;
+
+}
+
+/*caja del texto de cobertura*/
+.texto-cobertura {
+    flex: 1;
+    min-width: 300px;
+}
+
+/*titulo de la seccion de cobertura*/
+.texto-cobertura h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin: 20px 0;
+}
+
+/*color del titulo de la seccion de cobertura*/
+.texto-cobertura span {
+    color: var(--color-principal);
+}
+
+/*contenedor de las zonas*/
+.zonas-grid {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/*caja de zonas*/
+.zona-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/*icono de la zona*/
+.zona-item img {
+    color: var(--color-principal);
+    width: 40px;
+    margin-top: 5px;
+}
+
+/*titulo de la zona*/
+.zona-item h4 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/*parrafo de la zona*/
+.zona-item p {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+/* Estilo del Mapa Creativo */
+.mapa-creativo {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*animacion al pasar el mouse sobre el mapa*/
+.mapa-creativo:hover .img-mapa {
+    filter: brightness(1) contrast(1.2) opacity(0.8);
+    transform: scale(1.2);
+}
+
+/*imagenes del mapa*/
+.img-mapa {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Este filtro es el secreto: hace que el mapa sea gris oscuro y sutil */
+    filter: brightness(0.8) contrast(1.2) opacity(0.5);
+    transition: all 0.5s ease;
+}
+
+/* Efecto de Pulso Neón */
+.pulso-neon {
+    position: absolute;
+    top: 25%;
+    right: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--color-principal);
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--color-principal);
+    z-index: 5;
+    animation: pulsar 2s infinite;
+}
+
+/*animacion del pulso neón*/
+@keyframes pulsar {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+/* Pines flotantes */
+.pin {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    /* Efecto cristal de lujo */
+    color: var(--color-principal);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-principal);
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(202, 255, 11, 0.2);
+    z-index: 10;
+}
+
+/*pin de caracas*/
+.pin-caracas {
+    position: absolute;
+    top: 17%;
+    /* Sube el pin hacia la costa norte */
+    right: 40%;
+    /* Lo centra en la zona de la capital */
+}
+
+/*pin de altos mirandinos*/
+.pin-altos {
+    position: absolute;
+    top: 26%;
+    /* Un poco más abajo que Caracas */
+    right: 53%;
+    /* Ligeramente más hacia el centro/oeste */
+}
+
+/*medios de pantalla pequenos*/
+@media (max-width: 768px) {
+    .container-cobertura {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .zona-item {
+        text-align: left;
+    }
+}
+
+/* Responsive para botones */
+@media (max-width: 600px) {
+    .botones-contacto {
+        flex-direction: column;
+    }
+}
+
+
+/* ==== 10. CIERRE  ANTES DEL FOOTER ==== */
+
+/*seccion de cierre*/
+.seccion-cierre-epico {
+    padding: 60px 5%;
+    background: #cccbcb;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/*banners de cierre*/
+.glass-banner {
+    max-width: 1500px;
+    /* Aumentamos un poco el tope */
+    width: 100%;
+    background: rgba(53, 53, 53, 0.63);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 60px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/*contenedor de los textos y botones*/
+.cierre-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    /* Espacio generoso entre texto y botones */
+    width: 100%;
+}
+
+/*caja de texto del banner de cierre*/
+.cierre-texto {
+    flex: 1;
+    /* Esto obliga al texto a ocupar todo el espacio sobrante disponible */
+    min-width: 300px;
+    /* Evita que se encoja demasiado */
+}
+
+/*titulo de cierre*/
+.cierre-texto h2 {
+    font-size: 2rem;
+    /* Recuperamos el tamaño imponente */
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    white-space: normal;
+    /* El título sí debe poder saltar de línea si es necesario */
+}
+
+/*color 2 del titulo*/
+.cierre-texto h2 span {
+    color: var(--color-principal);
+    /* Tu verde neón */
+}
+
+/*parrafo de cierre*/
+.cierre-texto p {
+    color: #faf9f9;
+    font-size: 1rem;
+}
+
+/*contenedor de los botones*/
+.cierre-botones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    /* LA CLAVE: Evita que los botones se encojan para darle espacio al texto */
+    flex-wrap: nowrap;
+
+}
+
+/* Estilo para el botón de imagen (WhatsApp) */
+.btn-whatsapp-humano {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 30px;
+    /* Aumentamos el padding para que sea más largo */
+    border-radius: 15px;
+    border: 1px solid rgba(37, 211, 102, 0.5);
+    white-space: nowrap;
+    /* <--- LA CLAVE: Todo el contenido en una línea */
+    transition: 0.3s;
+}
+
+/*imagen del boton*/
+.btn-whatsapp-humano img {
+    width: 35px;
+    height: 35px;
+    filter: drop-shadow(0 0 5px rgba(37, 211, 102, 0.4));
+}
+
+/*caja del texto del boton whatsapp*/
+.texto-ws {
+    display: flex;
+    flex-direction: row;
+    /* Cambiamos a fila para que el texto NO esté uno arriba del otro */
+    gap: 8px;
+    align-items: center;
+}
+
+/* Efecto al pasar el mouse sobre el boton whatsapp */
+.btn-whatsapp-humano:hover {
+    background: rgba(37, 211, 102, 0.08);
+    border-color: #25D366;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*efecto al pasar el mouse sobre la imagen del boton whatsapp*/
+.btn-whatsapp-humano:hover img {
+    filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.8));
+}
+
+/*texto principal del boton whatsapp*/
+.main-ws {
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Botones con estilo premium */
+.btn-principal-cierre {
+    background: var(--color-principal);
+    color: #000;
+    padding: 18px 40px;
+    /* Más espacio a los lados */
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    /* <--- LA CLAVE: El texto no saltará de línea */
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid var(--color-principal);
+    text-align: center;
+}
+
+
+/*efecto al pasar el mouse sobre el boton principal*/
+.btn-principal-cierre:hover {
+    background: transparent;
+    color: var(--color-principal);
+    box-shadow: 0 0 20px rgba(202, 255, 11, 0.4);
+}
+
+
+/* Luz neón de fondo para el efecto épico */
+.luz-decorativa {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: var(--color-principal);
+    filter: blur(100px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* RESPONSIVE PARA EL BANNER DE CIERRE */
+@media (max-width: 991px) {
+    .cierre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .glass-banner {
+        padding: 40px 30px;
+    }
+
+    .cierre-botones {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-principal-cierre,
+    .btn-secundario-cierre {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Responsivo: Si la pantalla es muy pequeña, escalamos un poco el tamaño a los botones del cierre*/
+@media (max-width: 768px) {
+    .cierre-botones {
+        flex-direction: column;
+        /* Solo en móviles muy pequeños los ponemos uno sobre otro */
+        width: 100%;
+    }
+
+    .btn-principal-cierre,
+    .btn-whatsapp-humano {
+        width: 100%;
+        /* Que ocupen todo el ancho en móvil */
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE PARA EL BANNER (HERO SLIDER)
+   ========================================== */
+
+/* Tablets y pantallas medianas banner del home*/
+@media (max-width: 992px) {
+    .hero-slider {
+        height: 70vh;
+        /* Bajamos un poco la altura para que no sea tan alto */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+        /* Reducimos el tamaño de la letra */
+    }
+}
+
+/* Celulares (Pantallas pequeñas) banner del home */
+@media (max-width: 600px) {
+    .hero-slider {
+        height: 85vh;
+        /* Le damos más altura relativa para que luzca el video */
+    }
+
+    /* Ajustamos el contenedor del texto */
+    .hero-content {
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    /* Título principal más pequeño y legible */
+    .hero-content h1 {
+        font-size: 1.8rem;
+        /* Evita que el texto se amontone */
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    /* El párrafo de descripción */
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+
+    /* Botón llamativo y fácil de tocar con el pulgar */
+    .btn-main {
+        padding: 15px 25px;
+        font-size: 1rem;
+        display: inline-block;
+        width: 90%;
+        /* Casi todo el ancho para que sea fácil de clickear */
+        border-radius: 8px;
+    }
+
+    /* Los indicadores (dots) abajo */
+    .slider-dots {
+        bottom: 20px;
+        /* Los subimos un poquito para que no se peguen al borde */
+        gap: 8px;
+    }
+
+    .dot {
+        width: 35px;
+        /* Barras un poco más cortas */
+        height: 5px;
+    }
+
+    .dot.active {
+        width: 50px;
+        /* La barra activa destaca pero no se sale */
+    }
+
+    /* Aseguramos que el video/imagen no se deforme */
+    .video-bg,
+    .img-bg {
+        object-position: center;
+        /* Centra la acción del video */
+    }
+}
+
+/* BREAKPOINT SECCION NUESTRO DIFERENCIAL */
+@media (max-width: 900px) {
+    .nuestro-diferencial {
+        flex-direction: column-reverse;
+        /* Apila imagen y texto */
+        text-align: center;
+
+    }
+
+    .texto-decorativo {
+        justify-content: center;
+    }
+
+    /*caja de la imagen de la seccion diferencial*/
+    .imagen-diferencial {
+        position: relative;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .imagen-diferencial img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content-diferencial {
+        height: 50vh;
+    }
+
+    .accion {
+        text-align: left
+            /* Mantenemos los puntos clave alineados a la izq */
+    }
+
+    .titulo-fondo2 {
+        font-size: 25vw;
+        opacity: 0.8;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+    }
+}
+
+/* BREAKPOINT SECCION NUESTRO DIFERENCIAL CEL MAS PEQUEÑOS */
+@media (max-width: 440px) {
+    .imagen-diferencial img {
+        position: relative;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+}
