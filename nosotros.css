@@ -20,7 +20,7 @@
 /*banner de nosotros*/
 .banner-nosotros {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.747)), url('../imagenes/fondo-banner-nosotros.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.747)), url('./imagenes/fondo-banner-nosotros.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
