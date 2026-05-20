@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: radial-gradient(circle at center, #070707ec 0%, #000000a9 50%, #caff0b1e 100%), url(../imagenes/fondo-banner-trabajo.webp);
+    background-image: radial-gradient(circle at center, #070707ec 0%, #000000a9 50%, #caff0b1e 100%), url(./imagenes/fondo-banner-trabajo.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -177,7 +177,7 @@ body {
 
 /*seccion del portafolio*/
 .jm-portfolio {
-    background-image: linear-gradient(to right, #000000d3, #000000ad), url(../imagenes/fondo-mapa.webp);
+    background-image: linear-gradient(to right, #000000d3, #000000ad), url(./imagenes/fondo-mapa.webp);
     background-position: center;
     background-size: cover;
     padding: 100px 0;
