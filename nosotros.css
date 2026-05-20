@@ -1,0 +1,637 @@
+:root {
+    --neon: #ccff0b;
+    --negro: #0a0a0a;
+    --blanco: #fdfcff;
+    --gris: #7f7f7f;
+}
+
+/*fuentes*/
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+/*==============================================
+    BANNER NOSOTROS
+================================================*/
+/*banner de nosotros*/
+.banner-nosotros {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.747)), url('../imagenes/fondo-banner-nosotros.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/*titulo banner*/
+.banner-nosotros h1 {
+    color: #fdfcff;
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 1rem;
+    text-transform: uppercase;
+
+
+}
+
+/*palabra esencial*/
+.aurora {
+    /* Colores estilo Aurora: Cian, Morado, Azul */
+    background: linear-gradient(to right,
+            #ccff0b,
+            #fdfcff,
+            #ccff0b,
+            #7f7f7f);
+    background-size: 300% auto;
+
+    /* El recorte mágico */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* Animación fluida */
+    animation: aurora-flow 5s linear infinite;
+
+    /* Importante para que la animación fluya bien */
+}
+
+/*animacion aurora*/
+@keyframes aurora-flow {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 300% center;
+    }
+}
+
+/*subtitulo banner*/
+.banner-nosotros h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin-top: 25px;
+    font-weight: 300;
+    color: #eee;
+}
+
+@media (max-width: 768px) {
+    .banner-nosotros {
+        height: 90vh;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .banner-nosotros h1 {
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        gap: 0;
+    }
+
+
+}
+
+/*==============================================
+    SECCION HISTORIA
+================================================*/
+
+.seccion-historia {
+    background-color: var(--negro);
+    padding: 30px 10%;
+    border-top: 3px solid var(--neon);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+}
+
+/*contenedor-texto historia*/
+.contenedor-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+/*titulo historia*/
+.titulo-seccion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.5rem, 3.8vw, 5.5rem);
+    color: var(--neon);
+    margin-bottom: 25px;
+    background: linear-gradient(to right,
+            #ccff0b,
+            #fdfcff,
+            #ccff0b,
+            #7f7f7f);
+    background-size: 300% auto;
+
+    /* El recorte mágico */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* Animación fluida */
+    animation: aurora-flow 5s linear infinite;
+    display: inline-block;
+    /* Importante para que la animación fluya bien */
+}
+
+
+/*parrafo-principal historia*/
+.parrafo-principal {
+    line-height: 1.9;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/*cuadro-destacado historia*/
+.cuadro-destacado {
+    border-left: 5px solid var(--neon-jm);
+    padding: 20px 30px;
+    background: rgba(204, 255, 11, 0.05);
+    margin: 40px 0;
+    position: relative;
+}
+
+
+.cuadro-destacado p {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/*linea vertical NEON  de la tarjeta*/
+.linea-neon {
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 5px;
+    /* Ancho fijo para que no se vea gigante en desktop */
+    height: 100%;
+    background: var(--color-principal);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+
+/*==============================================
+    SECCION interactiva MISION Y VISION
+================================================*/
+
+
+/*seccion misino y vision*/
+.jm-interactive-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background: var(--negro);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+
+}
+
+/*caja contenedora*/
+.jm-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    background: #111;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px rgba(202, 255, 11, 0.212);
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+/*caja animada*/
+.jm-layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    background: #181818e8;
+}
+
+/* Estado de la Misión */
+.jm-mision {
+    clip-path: circle(150% at 0% 0%);
+    z-index: 1;
+}
+
+/* Estado de la Visión (Oculta por defecto con clip-path) */
+.jm-vision {
+    clip-path: circle(0% at 100% 100%);
+    z-index: 2;
+    background: #151515;
+    border-left: 2px solid var(--neon);
+}
+
+/* Clase activa para mostrar la visión */
+.jm-vision.active {
+    clip-path: circle(150% at 100% 100%);
+}
+
+/* Diseño de contenido */
+.jm-content {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*tiempo mision*/
+.jm-tiempo {
+    color: var(--neon);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/*titulo mision*/
+.jm-titulo {
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+}
+
+/*texto mision*/
+.jm-texto {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Lado de la Imagen */
+.jm-image-mision {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.jm-image-mision img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jm-image-vision {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.jm-image-vision img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botón Neón Mejorado */
+.jm-btn-neon {
+    width: fit-content;
+    padding: 15px 35px;
+    background: transparent;
+    border: 2px solid var(--neon);
+    color: var(--neon);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.jm-btn-neon:hover {
+    background: var(--neon-jm);
+    color: var(--blanco);
+    box-shadow: 0 0 30px rgba(202, 255, 11, 0.575);
+    transform: translateY(-3px);
+}
+
+/* ==============================================
+   AJUSTE RESPONSIVE DEFINITIVO PARA JM-INTERACTIVE
+================================================*/
+@media (max-width: 768px) {
+    .jm-interactive-section {
+        padding: 20px;
+        min-height: auto;
+        /* Permite que la sección se ajuste */
+    }
+
+    /*caja contenedora*/
+    .jm-container {
+        height: auto;
+        /* Clave: altura automática */
+        min-height: auto;
+        display: block;
+        /* Cambiamos a bloque para control total */
+        border-radius: 20px;
+    }
+
+    /*caja animada*/
+    .jm-layer {
+        flex-direction: column;
+        position: relative;
+        /* Cambiamos a relative para que ocupen espacio real */
+        display: none;
+        /* Ocultamos ambas por defecto */
+        width: 100%;
+        min-height: 600px;
+        /* Altura mínima para mantener consistencia */
+    }
+
+    /* Mostramos solo la capa activa en móvil */
+    .jm-layer.active {
+        display: flex;
+    }
+
+    /* La visión necesita ser absoluta solo cuando se activa para la animación, 
+       pero en móvil es mejor que sea directa para evitar espacios vacíos */
+    .jm-vision {
+        position: absolute;
+        clip-path: none;
+        /* Quitamos clip-path en móvil para evitar bugs de espacio */
+        border-left: none;
+        border-top: 2px solid var(--neon-jm);
+        display: none;
+    }
+
+    /*caja animada vision*/
+    .jm-vision.active {
+        display: flex;
+        position: relative;
+        /* Al activarse, vuelve a ocupar espacio */
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    /*animacion*/
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /*imagen de la mision*/
+    .jm-image-mision {
+        width: 100%;
+        height: 200px;
+        /* Imagen más pequeña en móvil */
+        flex: none;
+        order: -1;
+        /* Imagen siempre arriba */
+    }
+
+    /*contenedor del contenido*/
+    .jm-content {
+        width: 100%;
+        padding: 25px 15px;
+        text-align: center;
+        align-items: center;
+        flex: none;
+        gap: 15px;
+    }
+
+    /*titulo*/
+    .jm-titulo {
+        font-size: 1.8rem;
+    }
+
+    /*texto*/
+    .jm-texto {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .jm-btn-neon {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+    }
+}
+
+/* ==============================================
+   SECCION NUESTROS VALORES
+================================================*/
+
+.jm-beneficios-section {
+    padding: 30px 20px;
+    background: var(--negro);
+    color: white;
+    overflow: hidden;
+    border-bottom: 3px solid var(--neon);
+}
+
+.jm-beneficios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Grid dinámico: 3 columnas en PC, se ajusta solo en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.jm-beneficios-card {
+    border: 1px solid #caff0b50;
+    padding: 20px 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+/* Efecto Hover */
+.jm-beneficios-card:hover {
+    transform: translateY(-15px);
+    background: rgba(202, 255, 11, 0.041);
+    border-color: var(--cian-jm);
+    box-shadow: 0 15px 40px rgba(202, 255, 11, 0.288);
+}
+
+
+
+.jm-beneficios-card:hover .jm-icon-wrapper {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px var(--neon);
+}
+
+.jm-numero-caja {
+    margin-bottom: 1px;
+}
+
+.jm-numero {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    /* Tu fuente de títulos */
+    color: #fff;
+}
+
+.jm-simbolo {
+    font-size: 2rem;
+    color: var(--neon);
+    font-weight: bold;
+}
+
+.jm-beneficios-card h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 3;
+}
+
+.jm-beneficios-card p {
+    color: #aaa;
+    line-height: 1;
+    font-size: 1rem;
+}
+
+/* --- MEDIA QUERIES PARA ADAPTABILIDAD --- */
+@media (max-width: 768px) {
+    .jm-beneficios-section {
+        padding: 50px 15px;
+    }
+
+    .jm-beneficios-container {
+        gap: 20px;
+    }
+
+    .jm-beneficios-card {
+        padding: 30px 20px;
+    }
+
+    .jm-numero {
+        font-size: 2.8rem;
+    }
+}
+
+
+/* ==============================================
+  SECCION IMPACTO SOCIAL
+================================================*/
+
+
+/* --- IMPACTO SOCIAL (ADULTOS MAYORES) --- */
+
+/*seccion con imagen de fondo*/
+.seccion-impacto {
+    padding: 120px 10%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.74)), url(../imagenes/señora-limpieza-nosotros.webp);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*contenedor del contenido*/
+.contenedor-texto-impacto {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*etiqueta neon*/
+.etiqueta-social {
+    background: var(--neon);
+    color: #000;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 20%;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/*contacto*/
+.contacto-impacto {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+/*botoncito neon*/
+.contacto-impacto a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #ccff0b, #ffffff, #ccff0b);
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+/*texto dentro del boton*/
+.contacto-impacto a span {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+}
+
+/*antes del boton*/
+.contacto-impacto a::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+/*animacion del boton*/
+.contacto-impacto a:hover::before {
+    opacity: 0.7;
+}
+
+/*Caja después del enlace*/
+.contacto-impacto a::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #ccff0b, #000000, #ccff0b);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+}
+
+/*animacion del boton*/
+.contacto-impacto a:hover::after {
+    opacity: 1;
+}

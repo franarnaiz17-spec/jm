@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabajo</title>
+
+    <!--fuentes-->
+    <link rel="preconnect" href="https://googleapis.com">
+    <!--montserrat-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--anton-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!--menu responsive-->
+    <link rel="stylesheet" href="../CSS/menu.css">
+
+    <!--Estilos globales-->
+    <link rel="stylesheet" href="../CSS/Global-estilos.css">
+
+    <!--estilos trabajos-->
+    <link rel="stylesheet" href="../CSS/trabajos.css">
+
+
+    <!--estilos footer-->
+    <link rel="stylesheet" href="../CSS/footer.css">
+
+</head>
+
+<body>
+    <header>
+        <!--navegacion-->
+        <nav>
+            <!--logo-->
+            <div class="logo">
+                <img src="../imagenes/Logo JM multiservicios VARIABLE.png" loading="lazy" alt="Logo JM Multiservicios">
+            </div>
+
+            <!--boton del menu responsive-->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!--lista de servicios-->
+            <div class="listas">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Quienes Somos</a></li>
+                    <li><a href="trabajos.html">Nuestro Trabajo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!--boton de contacto-->
+            <div class="contact">
+                <a href="contacto.html">
+                    <span>Agenda tu servicio</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =========================================================================
+         BANNER PRINCIPAL - PÁGINA DE TRABAJOS (HTML)
+         ========================================================================= -->
+    <section class="banner-trabajos" id="trabajos">
+        <div class="capa-banner-trabajos">
+        </div>
+        <div class="contenido-banner">
+            <span class="insignia-banner" data-reveal="boton">Soluciones Estructurales de Alta Gama</span>
+            <h1 data-reveal="boton" data-delay="200">Conoce nuestros trabajos <span>con alta precision</span></h1>
+            <p data-reveal="bottom" data-delay="400">Mantenimiento integral, restauración avanzada de superficies y
+                servicios de infraestructura diseñados para la tranquilidad de su junta de condominio en Caracas.
+            </p>
+            <div class="boton-banner" data-reveal="boton" data-delay="600">
+                <a href="#contacto" class="boton-contacto">Inicia tu proyecto</a>
+                <a href="#galeria" class="boton-galeria">Explorar Galería <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECCIÓN DE ALIADOS E INFRAESTRUCTURA (CAROUSEL infinito) - HTML
+         ========================================================================= -->
+    <section class="infinito">
+        <!--contenedor del carrusel-->
+        <div class="animated">
+            <!--caja de servicios e imagenes -->
+            <div class="servicios">
+                <div class="caja-img">
+                    <img src="../imagenes/image1.webp" alt="Aliado 1" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image2.webp" alt="Aliado 2" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image3.webp" alt="Aliado 3" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image4.webp" alt="Aliado 4" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image5.webp" alt="Aliado 5" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image1.webp" alt="Aliado 1" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image2.webp" alt="Aliado 2" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image3.webp" alt="Aliado 3" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image4.webp" alt="Aliado 4" loading="eager">
+                </div>
+                <div class="caja-img">
+                    <img src="../imagenes/image5.webp" alt="Aliado 5" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         PORTAFOLIO TÉCNICO - GALERÍA DE TRABAJOS (REFORZADA)
+         ========================================================================= -->
+    <section class="jm-portfolio" id="galeria">
+        <div class="contenedor-galeria">
+            <div class="contenedor-categoria-trabajos">
+                <span class="insignia-banner">Portafolio Técnico</span>
+                <h2>Ingeniería y Acabados en Acción</h2>
+                <p>Explore ejecuciones reales clasificadas por especialidad técnica. Soluciones duraderas, sin parches
+                    temporales.</p>
+
+                <div class="portfolio-elecciones">
+                    <button class="eleccion-btn active" data-filter="all">Todos</button>
+                    <button class="eleccion-btn" data-filter="revestimientos">Revestimientos & Pisos</button>
+                    <button class="eleccion-btn" data-filter="hidraulica">Sistemas Hídricos</button>
+                    <button class="eleccion-btn" data-filter="infraestructura">Infraestructura & Obra</button>
+                    <button class="eleccion-btn" data-filter="limpieza">Limpieza Corporativa</button>
+                </div>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-trabajos" data-category="infraestructura" data-reveal="bottom">
+                    <div class="item-trabajos">
+                        <img src="../imagenes/impermeabilizacion.webp" alt="Impermeabilización de alto impacto">
+                        <div class="item-capa">
+                            <span class="item-categoria">Impermeabilización</span>
+                            <h3>Aislamiento Térmico y de Humedad</h3>
+                            <p>Sistemas de mantos asfálticos modificados y elastómeros de alta resistencia mecánica
+                                libres de filtración.</p>
+                            <span class="item-metricas">Eficiencia: 100% Hermético</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="revestimientos" data-reveal="bottom" data-delay="100">
+                    <div class="item-trabajos">
+                        <img src="../imagenes/microcemento.webp" alt="Aplicación de microcemento">
+                        <div class="item-capa">
+                            <span class="item-categoria">Microcemento</span>
+                            <h3>Superficies Continuas de Diseño</h3>
+                            <p>Revestimiento vanguardista sin juntas para vestíbulos, pasillos y zonas VIP de alta
+                                circulación.</p>
+                            <span class="item-metricas">Estética: Continuidad Espacial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="revestimientos" data-reveal="bottom" data-delay="200">
+                    <div class="item-trabajos">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80"
+                            alt="Pintura Epóxica en Estacionamientos">
+                        <div class="item-capa">
+                            <span class="item-categoria">Pintura Epóxica</span>
+                            <h3>Resistencia Química en Parkings</h3>
+                            <p>Demarcación y sellado de pavimentos industriales y estacionamientos con resinas de alta
+                                dureza anti-aceites.</p>
+                            <span class="item-metricas">Dureza: Tráfico Pesado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="hidraulica" data-reveal="bottom">
+                    <div class="item-trabajos">
+                        <img src="../imagenes/evaluacion.webp" alt="Diagnóstico de tableros eléctricos y bombas">
+                        <div class="item-capa">
+                            <span class="item-categoria">Evaluación & Diagnósticos</span>
+                            <h3>Auditoría Integal de condominios</h3>
+                            <p>Análisis termográfico e hidráulico completo de tableros de control y sistemas de bombeo
+                                hidroneumáticos.</p>
+                            <span class="item-metricas">Diagnóstico: Predictivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="revestimientos" data-reveal="bottom" data-delay="100">
+                    <div class="item-trabajos">
+                        <img src="../imagenes/piso-marmol.webp" alt="Pulido de mármol y granito">
+                        <div class="item-capa">
+                            <span class="item-categoria">Pisos de Mármol y Piedras</span>
+                            <h3>Restauración Cristalizada</h3>
+                            <p>Rebajado, emplomado y diamantado profundo de superficies de granito para recuperación de
+                                brillo natural espejado.</p>
+                            <span class="item-metricas">Brillo: Efecto Cristal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="infraestructura" data-reveal="bottom" data-delay="200">
+                    <div class="item-trabajos">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
+                            alt="Instalaciones eléctricas industriales">
+                        <div class="item-capa">
+                            <span class="item-categoria">Renovaciones Eléctricas</span>
+                            <h3>Adecuación de Redes y Cargas</h3>
+                            <p>Sustitución de acometidas principales, balanceo de fases y modernización de redes de
+                                iluminación LED inteligente.</p>
+                            <span class="item-metricas">Ahorro: -35% Consumo Energético</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="hidraulica" data-reveal="bottom">
+                    <div class="item-trabajos">
+                        <img src="../imagenes/plomeria.webp" alt="Sistemas de plomería y aducción">
+                        <div class="item-capa">
+                            <span class="item-categoria">Plomería Avanzada</span>
+                            <h3>Matrices de Distribución de Agua</h3>
+                            <p>Sustitución de colectores principales de aguas servidas y líneas de distribución de agua
+                                potable de alta presión.</p>
+                            <span class="item-metricas">Presión: Caudal Homogéneo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="infraestructura" data-reveal="bottom" data-delay="100">
+                    <div class="item-trabajos">
+                        <img src="../imagenes/albañileria.webp" alt="Obras de albañilería">
+                        <div class="item-capa">
+                            <span class="item-categoria">Albañilería y Reformas</span>
+                            <h3>Consolidación Estructural</h3>
+                            <p>Reparación de fachadas, control de grietas vivas, reconstrucción de muros y nivelación
+                                técnica de losas de concreto.</p>
+                            <span class="item-metricas">Control: Cero Grietas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-trabajos" data-category="limpieza" data-reveal="bottom" data-delay="200">
+                    <div class="item-trabajos">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
+                            alt="Limpieza corporativa profesional">
+                        <div class="item-capa">
+                            <span class="item-categoria">Limpieza por Bloques de Tiempo</span>
+                            <h3>Sustitución de Conserjerías</h3>
+                            <p>Planes semanales flexibles de higienización profunda por turnos estructurados. Adiós a
+                                las contingencias legales.</p>
+                            <span class="item-metricas">Flexibilidad: Turnos a Medida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         LIGHTBOX PORTFOLIO (IMAGEN AMPLIADA)
+         ========================================================================= -->
+    <div id="jm-lightbox" class="lightbox">
+        <span class="lightbox-cerrar">&times;</span>
+        <img class="lightbox-contenido" id="lightbox-img" src="" alt="Imagen ampliada">
+        <div id="lightbox-titulo" class="lightbox-caption"></div>
+    </div>
+
+    <!-- =========================================================================
+         SECCION DE TESTIMONIOS  (VIDEOS)
+         ========================================================================= -->
+    <section class="jm-testimonnios">
+        <!--encabezado de la seccion de testimonios-->
+        <div class="contenedor-testimonnios">
+            <!--contenedor del encabezado de los testimonios-->
+            <div class="encabezado-testimonio">
+                <!--insignia del encabezado-->
+                <span class="insignia-testimonio">Casos de Éxito</span>
+                <!--titulo del encabezado-->
+                <h2>La Opinión de las Juntas de Condominio</h2>
+                <!--parrafo del encabezado-->
+                <p>La transparencia genera confianza. Conozca la experiencia de administradores que han transformado sus
+                    espacios con nosotros.</p>
+            </div>
+            <!--contenedor de los testimonios-->
+            <div class="testimonios-grid">
+                <!--tarjeta de testimonio-->
+                <div class="testimonios-card">
+                    <!--video de la tarjeta-->
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" poster="../imagenes/poster-testimonio1.jpg">
+                            <source src="../videos/testimonio1-trabajo.mp4" type="video/mp4">
+                            Tu navegador no soporta videos en HTML5.
+                        </video>
+                    </div>
+                    <!--contenedor de la informacion de la tarjeta-->
+                    <div class="testimonio-info">
+                        <!--contenedor de las estrellas-->
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <!--titulo del testimonio-->
+                        <h2>Testimonio de Propietario</h2>
+                        <!--ubicacion del testimonio-->
+                        <h3 class="ubicacion"><i class="fas fa-map-marker-alt"></i> Sarría, Caracas</h3>
+                        <!--parrafo del testimonio-->
+                        <p>Un cliente más satisfecho con nuestro trabajo. Gracias a ti Elvin por permitirnos servirte.!
+                        </p>
+                        <!--metrica del testimonio-->
+                        <span class="metrica-testimonio">Garantía de Confianza</span>
+                    </div>
+                </div>
+                <!--tarjeta de testimonio-->
+                <div class="testimonios-card">
+                    <!--video de la tarjeta-->
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" poster="../imagenes/poster-testimonio2.jpg">
+                            <source src="../videos/testimonio2-trabajo.mp4" type="video/mp4">
+                            Tu navegador no soporta videos en HTML5.
+                        </video>
+                    </div>
+                    <!--contenedor de la informacion de la tarjeta-->
+                    <div class="testimonio-info">
+                        <!--contenedor de las estrellas-->
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <!--titulo del testimonio-->
+                        <h2>Edificio Doña Amalia</h2>
+                        <!--ubicacion del testimonio-->
+                        <h3 class="ubicacion"><i class="fas fa-map-marker-alt"></i> La Pastora, Caracas</h3>
+                        <!--parrafo del testimonio-->
+                        <p>El Edificio Doña Amalia, ubicado en la Pastora, Caracas, nos ha confiado la limpieza de sus
+                            áreas comunes por más de 9 meses de servicio ininterrumpido. Gracias por la oportunidad de
+                            servirles.</p>
+                        <!--metrica del testimonio-->
+                        <span class="metrica-testimonio">9 Meses de Servicio Ininterrumpido</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECCION DE BLOG
+         ========================================================================= -->
+    <section class="jm-blog" id="blog">
+        <div class="seccion-blog">
+            <div class="encabezado-blog">
+                <span class="insignia-blog">Cultura de Mantenimiento</span>
+                <h2>Consejos y Buenas Prácticas Técnicas</h2>
+                <p>Compartimos conocimiento especializado para ayudar a las comunidades a identificar problemas
+                    estructurales antes de que se conviertan en emergencias costosas.</p>
+            </div>
+
+            <div class="grid-blog">
+                <article class="tarjeta-blog" data-reveal="bottom">
+                    <div class="imagen-blog">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=500&q=80"
+                            alt="Mantenimiento hidroneumático">
+                    </div>
+                    <div class="info-blog">
+                        <span class="blog-date">Mantenimiento Preventivo</span>
+                        <h3>3 Alertas críticas en el sistema de bombeo de su edificio</h3>
+                        <p>Aprenda a identificar fluctuaciones de presión y ciclos de encendido cortos en tableros de
+                            control para prevenir quemaduras de motores principales.</p>
+                        <a href="#" class="blog-link">Leer Artículo Completo <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-blog" data-reveal="bottom" data-delay="150">
+                    <div class="imagen-blog">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=80"
+                            alt="Cuidado de mármol">
+                    </div>
+                    <div class="info-blog">
+                        <span class="blog-date">Guía de Materiales</span>
+                        <h3>Cómo prolongar el cristalizado de pisos de mármol y granito</h3>
+                        <p>Evite el uso de detergentes ácidos tradicionales en las áreas comunes. Le explicamos qué
+                            compuestos neutros usar para mantener el sellado y el efecto espejo.</p>
+                        <a href="#" class="blog-link">Leer Artículo Completo <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div id="blog-modal" class="blog-modal">
+            <div class="blog-modal-content">
+                <span class="blog-modal-cerrar">&times;</span>
+                <div class="blog-modal-header">
+                    <span id="blog-modal-categoria"></span>
+                    <h2 id="blog-modal-titulo"></h2>
+                </div>
+                <div id="blog-modal-cuerpo" class="blog-modal-cuerpo">
+                </div>
+            </div>
+        </div>
+
+        <div id="jm-lightbox" class="lightbox">
+    </section>
+
+</body>
+<script src="../js/active.js"></script>
+
+</html>

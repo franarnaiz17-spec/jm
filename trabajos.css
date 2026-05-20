@@ -1,0 +1,886 @@
+:root {
+    --color-principal: #ccff0b;
+    /* Neón JM */
+    --color-secundario: #fdfcff;
+    --color-terciario: #000000;
+    --color-cuaternario: #7f7f7f;
+    --header-bg: rgba(20, 20, 20, 0.95);
+    /* Fondo oscuro elegante */
+}
+
+body {
+    background: var(--color-terciario);
+}
+
+/* banner trabajos */
+
+.banner-trabajos {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle at center, #070707ec 0%, #000000a9 50%, #caff0b1e 100%), url(../imagenes/fondo-banner-trabajo.webp);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.contenido-banner {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+    padding: 0 24px;
+}
+
+
+.contenido-banner h1 {
+    font-size: clamp(1rem, 4rem, 5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.contenido-banner h1 span {
+    color: var(--color-principal);
+}
+
+.contenido-banner p {
+    color: #a1a0a0;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+
+}
+
+.boton-banner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.boton-contacto {
+    background: var(--color-principal);
+    color: #000000;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(202, 255, 11, 0.74);
+    transition: var(--transition-smooth);
+}
+
+.boton-contacto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px var(--color-principal);
+}
+
+.boton-galeria {
+    background: #caff0b0a;
+    border: 1px solid #caff0b21;
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.boton-galeria i {
+    font-size: 1.2rem;
+    color: var(--color-principal);
+}
+
+.boton-galeria:hover {
+    border-color: var(--color-principal);
+    background: #caff0b17;
+    box-shadow: 0 0 20px var(--neon-glow);
+}
+
+.insignia-banner {
+    display: inline-block;
+    background: #caff0b18;
+    border: 1px solid #caff0b21;
+    color: var(--color-principal);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+/*=================== ESTILOS PARA CELULARES (Menos de 600px) ===================*/
+@media (max-width: 600px) {
+
+    /* Ajustamos el banner para que el texto se vea bien en móvil */
+    .banner-trabajos {
+        padding-top: 60px;
+        /* Menos padding para que no choquen los botones */
+    }
+
+    .contenido-banner {
+        padding: 0 20px;
+    }
+
+    /* Hacemos que el título sea más compacto en móvil */
+    .contenido-banner h1 {
+        font-size: 2.2rem;
+        /* Más pequeño que en PC */
+        letter-spacing: -1px;
+    }
+
+    /* Botones: Los apilamos en una columna para que sean fáciles de tocar */
+    .boton-banner {
+        flex-direction: column;
+        /* Apilados verticalmente */
+        gap: 15px;
+        /* Espacio entre el botón de arriba y el de abajo */
+        width: 100%;
+        /* Ocupan todo el ancho disponible */
+        max-width: 320px;
+        /* Ancho máximo para que no se vean gigantes */
+        margin: 0 auto;
+        /* Centrados */
+    }
+
+    /* Ajustamos el estilo de los botones para que se vean bien apilados */
+    .boton-contacto,
+    .boton-galeria {
+        width: 100%;
+        text-align: center;
+        padding: 14px 25px;
+        /* Reducimos un poco el padding interno */
+        font-size: 1rem;
+    }
+
+    /* Ajustamos la insignia para que se vea bien */
+    .insignia-banner {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        margin-bottom: 20px;
+    }
+
+    /* Opcional: Ajustar el párrafo */
+    .contenido-banner p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/*seccion del portafolio*/
+.jm-portfolio {
+    background-image: linear-gradient(to right, #000000d3, #000000ad), url(../imagenes/fondo-mapa.webp);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+/*contenedor de la galeria*/
+.contenedor-galeria {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 10px 24px;
+
+}
+
+/*contenedor de categoria de trabajos*/
+.contenedor-categoria-trabajos {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+    border-radius: 10px;
+}
+
+.contenedor-categoria-trabajos h2 {
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.contenedor-categoria-trabajos p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/*contenedor de eleccion de servicios*/
+.portfolio-elecciones {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+/*botones de eleccion*/
+.eleccion-btn {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    padding: 10px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition-smooth);
+}
+
+/*boton activo*/
+.eleccion-btn:hover,
+.eleccion-btn.active {
+    background: rgba(202, 255, 11, 0.05);
+    border-color: var(--color-principal);
+    color: var(--color-principal);
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
+
+/*contenedor grid de las tarjetas de trabajos*/
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+
+}
+
+/*caja de las tarjetas de trabajos*/
+
+/*tarjeta de trabajo*/
+.item-trabajos {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    height: 400px;
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-trabajos {
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    will-change: opacity, transform;
+}
+
+/*imagen de la tarjeta*/
+.portfolio-trabajos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/*capa de la tarjeta*/
+.item-capa {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 19, 1, 0.877) 60%, rgba(5, 10, 18, 0.2) 100%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: transform 0.6s ease;
+}
+
+.item-trabajos:hover .item-capa {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*escala la imagen al pasar el mouse*/
+.item-trabajos:hover img {
+    transform: scale(1.1);
+}
+
+/*categoria de la tarjeta*/
+.item-categoria {
+    color: var(--color-principal);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+/*titulo de la tarjeta categoria*/
+.item-titulo {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.item-capa h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.item-capa p {
+    color: #a7a6a6;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.item-metricas {
+    align-self: flex-start;
+    background: rgba(202, 255, 11, 0.08);
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+/* INTERRUPCIÓN O OCULTACIÓN POR ANIMACIÓN DE FILTRO */
+.portafolio-trabajos.hide {
+    display: none !important;
+}
+
+
+
+/* =========================================================================
+   ESTILOS DEL LIGHTBOX MODAL (JM MULTISERVICIOS)
+   ========================================================================= */
+
+
+.lightbox {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 999999;
+    /* Por encima de todo, incluso del menú */
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(5, 10, 18, 0.95);
+    /* Fondo oscuro premium */
+    backdrop-filter: blur(8px);
+    /* Efecto difuminado de fondo */
+}
+
+/* Imagen dentro del Lightbox */
+.lightbox-contenido {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 80vh;
+    border-radius: 8px;
+    border: 2px solid var(--color-principal, #ccff0b);
+    /* Borde de tu color neón */
+    box-shadow: 0 0 30px rgba(202, 255, 11, 0.2);
+
+    /* Animación de apertura */
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+}
+
+
+/* Clase que activa el JS al abrir */
+.lightbox.abierto .lightbox-contenido {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Título inferior de la imagen */
+.lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+/* Botón de cerrar (X) */
+.lightbox-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/*boton de cerrar al pasar el mouse */
+.lightbox-cerrar:hover {
+    color: var(--color-principal, #ccff0b);
+    transform: scale(1.1);
+}
+
+/* Ajuste responsivo para celulares del lightbox*/
+@media only screen and (max-width: 768px) {
+    .lightbox-contenido {
+        max-width: 95%;
+        margin-top: 15%;
+    }
+
+    .lightbox-cerrar {
+        right: 20px;
+        top: 10px;
+    }
+}
+
+
+
+/* =========================================================================
+   ESTILOS DE LOS TESTIMONIOS (VIDEOS) (JM MULTISERVICIOS)
+   ========================================================================= */
+
+/*seccion de los testimonios*/
+.jm-testimonnios {
+    padding: 60px 0;
+    background-image: radial-gradient(circle at center, #070707 0%, #000000c4 50%, #2f3b01a2 100%), url(../imagenes/fondo-la-pastora-testimonio.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+    border-top: 3px solid rgb(255, 255, 255);
+
+}
+
+/*contenedor de los testimonios*/
+.contenedor-testimonios {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    border-radius: 10px;
+
+}
+
+/*encabezado del testimonio*/
+.encabezado-testimonio {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+    border-radius: 10px;
+    padding: 10px 24px;
+}
+
+/*insignia del testimonio*/
+.insignia-testimonio {
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+/*titulo del testimonio*/
+.encabezado-testimonio h2 {
+    color: var(--color-principal);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+/*parrafo del testimonio*/
+.encabezado-testimonio p {
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+}
+
+/*contenedor de los testimonios*/
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+/*tarjeta de testimonio*/
+.testimonios-card {
+    background: #0707077e;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(202, 255, 11, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*hover de la tarjeta de testimonio*/
+.testimonios-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-principal, #ccff0b);
+    box-shadow: 0 10px 30px rgba(202, 255, 11, 0.1);
+}
+
+/*contenedor del video*/
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    background: #3d3d3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optimiza la altura visual del reproductor para videos en formato vertical */
+    height: 400px;
+}
+
+/*video de la tarjeta*/
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*informacion del testimonio*/
+.testimonio-info {
+    padding: 35px;
+
+
+}
+
+/*estrellas del testimonio*/
+.stars {
+    color: var(--color-principal);
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+/*titulo del testimonio*/
+.testimonio-info h2 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/*parrafo del testimonio*/
+.testimonio-info p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/*ubicacion del testimonio*/
+.testimonio-info .ubicacion {
+    color: #a0a0a0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/*icono de ubicacion*/
+.testimonio-info .ubicacion i {
+    color: var(--color-principal);
+}
+
+/*metrica del testimonio*/
+.metrica-testimonio {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/*responsive de la seccion de testimonios*/
+@media (max-width: 768px) {
+    .testimonios-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+}
+
+
+/* =========================================================================
+   ESTILOS DEL PROCESO DE TRABAJO (JM MULTISERVICIOS)
+   ========================================================================= */
+
+.jm-blog {
+    padding: 100px 0;
+    background-image: radial-gradient(circle at center, #070707 0%, #000000c4 50%, #2f3b01a2 100%), url(../imagenes/fondo-la-pastora-testimonio.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+
+}
+
+.seccion-blog {
+    margin-top: 30px;
+
+}
+
+.encabezado-blog {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+    border-radius: 10px;
+    padding: 5px 20px;
+
+}
+
+.encabezado-blog span {
+    color: var(--color-principal);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.encabezado-blog h2 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.encabezado-blog p {
+    color: #a0a0a0;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grid-blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin: 50px;
+}
+
+.tarjeta-blog {
+    background: #3d3d3d;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: var(--transition-smooth);
+}
+
+.tarjeta-blog:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-principal, #ccff0b);
+    box-shadow: 0 10px 30px rgba(202, 255, 11, 0.1);
+}
+
+.imagen-blog {
+    height: 350px;
+    width: 100%;
+}
+
+.imagen-blog img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*Info del blog*/
+
+.info-blog {
+    padding: 50px;
+}
+
+.info-blog span {
+    color: var(--color-principal);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.info-blog h3 {
+    color: #fff;
+    margin: 20px 0;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.info-blog p {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.blog-link {
+    color: var(--color-principal);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.blog-link:hover {
+    color: var(--color-principal);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .grid-blog {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+    .encabezado-blog {
+        margin: 0 auto 30px;
+    }
+
+    .grid-blog {
+        gap: 50px;
+    }
+
+    .encabezado-blog h2 {
+        font-size: 2rem;
+    }
+
+    .encabezado-blog p {
+        font-size: 1rem;
+    }
+
+    .info-blog {
+        padding: 30px;
+    }
+}
+
+
+/* =========================================================================
+   ESTILOS PARA EL MODAL DE CONSEJOS DEL BLOG
+   ========================================================================= */
+.blog-modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 10000;
+    /* Un paso por encima del lightbox */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(5, 10, 18, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.blog-modal-content {
+    background-color: #0b0f17;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid rgba(202, 255, 11, 0.2);
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+}
+
+/* Estado activo administrado por JS */
+.blog-modal.abierto .blog-modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.blog-modal-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.blog-modal-cerrar:hover {
+    color: var(--color-principal);
+}
+
+.blog-modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.blog-modal-header span {
+    color: var(--color-principal);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.blog-modal-header h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blog-modal-cuerpo {
+    color: #ccc;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.blog-modal-cuerpo ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.blog-modal-cuerpo li {
+    margin-bottom: 12px;
+    list-style-type: square;
+}
+
+.blog-modal-cuerpo li strong {
+    color: #fff;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .blog-modal-content {
+        width: 90%;
+        padding: 25px;
+        margin: 20% auto;
+    }
+
+    .blog-modal-header h2 {
+        font-size: 1.4rem;
+    }
+}

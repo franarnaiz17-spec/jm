@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/e7400bc5b7.js" crossorigin="anonymous"></script>
+    <!--animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://googleapis.com">
+    <!--montserrat-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--anton-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--enlace al css del menu-->
+    <link rel="stylesheet" href="../css/menu.css">
+    <!--Enlace al css de estilos-->
+    <link rel="stylesheet" href="../css/Global-estilos.css">
+    <!--Enlace al css de la pagina-->
+    <link rel="stylesheet" href="../css/nosotros.css">
+    <!--Enlace al css del footer-->
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+
+    <!--encabezado-->
+    <header>
+        <!--navegacion-->
+        <nav>
+            <!--logo-->
+            <div class="logo">
+                <img src="../imagenes/Logo JM multiservicios VARIABLE.png" loading="lazy" alt="Logo JM Multiservicios">
+            </div>
+
+            <!--boton del menu responsive-->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!--lista de servicios-->
+            <div class="listas">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Quienes Somos</a></li>
+                    <li><a href="trabajos.html">Nuestro Trabajo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!--boton de contacto-->
+            <div class="contact">
+                <a href="contacto.html">
+                    <span>Agenda tu servicio</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- ==== 1. BANNER NOSOTROS ==== -->
+
+        <section class="banner-nosotros">
+            <h1>Nuestra <br><span class="aurora">Esencia</span></h1>
+            <h2>Profesionalismo, maestría de oficio y la transparencia que su condominio necesita.</h2>
+        </section>
+
+        <!-- ==== 2. SECCION HISTORIA ==== -->
+
+        <section class="seccion-historia">
+            <div class="contenedor-texto">
+                <h2 class="titulo-seccion">Una Mirada Experta</h2>
+                <p class="parrafo-principal">
+                    JM Multiservicios nace en Caracas con un propósito innegociable: elevar los estándares de
+                    mantenimiento
+                    en condominios. No solo reparamos, transformamos cada área común en un espacio de orgullo para los
+                    vecinos.
+                </p>
+                <div class="cuadro-destacado">
+                    <div class="linea-neon"></div>
+                    <p>
+                        "Nuestra historia se escribe con honestidad, entregando resultados que saltan a la vista desde
+                        el
+                        primer
+                        día."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== 3. SECCION MISIO Y VISION ==== -->
+
+        <section class="jm-interactive-section">
+            <!--caja contenedora animada-->
+            <div class="jm-container">
+                <!--caja animada mision-->
+                <div class="jm-layer jm-mision active" id="layer-mision">
+                    <!--contenedor del contenido-->
+                    <div class="jm-content">
+                        <!--titulo-->
+                        <span class="jm-tiempo">Nuestro Presente</span>
+                        <!--titulo de la mision-->
+                        <h2 class="jm-titulo">Nuestra Misión</h2>
+                        <!--texto de la mision-->
+                        <p class="jm-texto">
+                            Transformar el caos y la incertidumbre del mantenimiento técnico en tranquilidad y
+                            eficiencia para hogares y comercios. No solo reparamos averías; restauramos la
+                            operatividad y la seguridad de los espacios donde nuestros clientes construyen su vida y
+                            sus negocios.
+                        </p>
+                        <!--boton de la mision-->
+                        <button class="jm-btn-neon" onclick="showVision()">
+                            VER NUESTRA VISIÓN <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <!--imagen de la mision-->
+                    <div class="jm-image-mision">
+                        <img src="../imagenes/cara-frontal-card-3d.webp" alt="Misión JM">
+                    </div>
+                </div>
+                <!--caja animada vision-->
+                <div class="jm-layer jm-vision" id="layer-vision">
+                    <!--contenedor del contenido-->
+                    <div class="jm-content">
+                        <!--titulo-->
+                        <span class="jm-tiempo">Nuestro Futuro</span>
+                        <!--titulo de la vision-->
+                        <h2 class="jm-titulo">Nuestra Visión</h2>
+                        <!--texto de la vision-->
+                        <p class="jm-texto">
+                            Ser reconocidos como el referente líder de <strong>muy alta calidad</strong> para edificios.
+                            Aspiramos a un modelo sustentable que evolucione con nuevas tecnologías y técnicas para
+                            superar
+                            siempre las expectativas.
+                        </p>
+                        <!--boton de la vision-->
+                        <button class="jm-btn-neon jm-btn-back" onclick="showMision()">
+                            <i class="fas fa-arrow-left"></i> VOLVER A MISIÓN
+                        </button>
+                    </div>
+                    <!--imagen de la vision-->
+                    <div class="jm-image-vision">
+                        <img src="../imagenes/cara-posterior-card-3d.webp" alt="Visión JM">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== 4. SECCION NUESTROS PILARES ==== -->
+        <section class="jm-beneficios-section">
+            <!--contenedor de los beneficios-->
+            <div class="jm-beneficios-container">
+                <!--tarjeta 1-->
+                <div class="jm-beneficios-card" data-aos="fade-up">
+                    <!--numero de la tarjeta-->
+                    <div class="jm-numero-caja">
+                        <span class="jm-numero" data-target="95">0</span><span class="jm-simbolo">%</span>
+                    </div>
+                    <!--titulo de la tarjeta-->
+                    <h3>Resolución</h3>
+                    <!--texto de la tarjeta-->
+                    <p>En la primera visita gracias a nuestro diagnóstico tecnológico avanzado.</p>
+                </div>
+
+                <div class="jm-beneficios-card" data-aos="fade-up" data-aos-delay="200">
+                    <!--numero de la tarjeta-->
+                    <div class="jm-numero-caja">
+                        <span class="jm-numero" data-target="6" data-start="90">90</span><span class="jm-simbolo">
+                            Meses</span>
+                    </div>
+                    <!--titulo de la tarjeta-->
+                    <h3>Garantía Real</h3>
+                    <!--texto de la tarjeta-->
+                    <p>Respaldo total en mano de obra y repuestos para tu tranquilidad absoluta.</p>
+                </div>
+                <!--Tarjeta 3-->
+                <div class="jm-beneficios-card" data-aos="fade-up" data-aos-delay="400">
+                    <!--numero de la tarjeta-->
+                    <div class="jm-numero-caja">
+                        <span class="jm-numero" data-target="4" data-start="90">90</span><span class="jm-simbolo">
+                            Horas</span>
+                    </div>
+                    <!--titulo de la tarjeta-->
+                    <h3>Atención Prioritaria</h3>
+                    <!--texto de la tarjeta-->
+                    <p>Tiempo de respuesta récord para emergencias técnicas en condominios.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==== 4. SECCION IMPACTO SOCIAL ==== -->
+
+        <section class="seccion-impacto">
+            <div class="contenedor-texto-impacto">
+                <span class="etiqueta-social">Valor Humano</span>
+                <h2 class="titulo-seccion">Sabiduría en cada detalle</h2>
+                <p class="parrafo-principal">
+                    Creemos firmemente en la experiencia. Por eso, gran parte de nuestro equipo está formado por
+                    <strong>Adultos Mayores</strong>, maestros de oficio que poseen la paciencia y la técnica necesarias
+                    para tratar superficies delicadas como el mármol y el granito.
+                </p>
+                <p class="parrafo-principal">
+                    Combinamos esta sabiduría tradicional con las últimas tendencias tecnológicas para ofrecer una
+                    gestión
+                    técnica inigualable en el mercado venezolano.
+                </p>
+                <!--boton de contacto-->
+                <div class="contacto-impacto">
+                    <a href="contacto.html">
+                        <span>CONECTA CON NOSOTROS</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="main-footer">
+            <!--contenedor del footer-->
+            <div class="container-footer">
+                <!--columna informacion de la marca-->
+                <div class="footer-col info-marca">
+                    <!--logo del footer-->
+                    <img src="../imagenes/Logo JM multiservicios VARIABLE.png" alt="JM Multiservicios"
+                        class="footer-logo">
+                    <!--parrafo-->
+                    <p>Transformamos la gestión de condominios con nuestra <span class="resaltado">Mirada
+                            Experta</span>.
+                        Honestidad, Transparencia y Calidad en cada detalle.</p>
+                    <!--caja contenedora de redes sociales-->
+                    <div class="social-links">
+                        <!--instagram-->
+                        <a href="https://wa.me/584241234567"><img src="../imagenes/logo-whatsapp.svg"
+                                alt="Instagram"></a>
+                        <!--facebook-->
+                        <a href="https://www.instagram.com/multiserviciosjmartin3z/"><img
+                                src="../imagenes/logo-instagram.svg" alt="Facebook"></a>
+                        <!--linkedin-->
+                        <a href="#"><img src="../imagenes/logo-tiktok.svg" alt="Tiktok"></a>
+                    </div>
+                </div>
+
+                <!--columna de servicios-->
+                <div class="footer-col">
+                    <!--titulo-->
+                    <h4>SERVICIOS</h4>
+                    <!--lista de servicios-->
+                    <ul>
+                        <!--servicio 1-->
+                        <li><a href="#">Limpieza Estratégica</a></li>
+                        <!--servicio 2-->
+                        <li><a href="#">Restauración de Pisos</a></li>
+                        <!--servicio 3-->
+                        <li><a href="#">Mantenimiento Técnico</a></li>
+                        <!--servicio 4-->
+                        <li><a href="#">Asesoría de Inmuebles</a></li>
+                    </ul>
+                </div>
+
+                <!--columna de contacto-->
+                <div class="footer-col">
+                    <!--titulo-->
+                    <h4>CONTACTO DIRECTO</h4>
+                    <!--lista de contacto-->
+                    <div class="contacto-items">
+                        <!--zona-->
+                        <p>Caracas y Altos Mirandinos</p>
+                        <!--telefono-->
+                        <p class="telefono">+58 424 123 45 67</p>
+                        <!--correo-->
+                        <p class="email">contacto@jmmultiservicios.com</p>
+                    </div>
+                </div>
+
+                <!--columna impacto social-->
+                <div class="footer-col">
+                    <!--titulo-->
+                    <h4>NUESTRO IMPACTO</h4>
+                    <!--parrafo-->
+                    <p>Orgullosos de integrar a <strong>Adultos Mayores</strong> en nuestra fuerza laboral, combinando
+                        experiencia y sabiduría para el cuidado de su hogar.</p>
+                </div>
+            </div>
+            <!--pie de pagina-->
+            <div class="footer-bottom">
+                <!--copyright-->
+                <p>&copy; 2024 JM Multiservicios - Todos los derechos reservados. | Diseñado con Mirada Experta.</p>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
+<script src="../js/active.js"></script>
+
+</html>
